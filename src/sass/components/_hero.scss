@@ -1,0 +1,155 @@
+
+ .icecream {
+    &__ellipse {
+    position: absolute;
+    top: 83px;
+    left: 36px;
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: $bg-cl-hero-ellipse;
+
+        @media screen and (min-width:768px) {
+                top: 43px;
+                left: 248px;
+                width: 335px;
+                height: 333px;
+        
+            }
+        @media screen and  (min-width:1200px) {
+            top: 54px;
+            left: 517px;
+            width: 534px;
+            height: 534px;
+            
+        }
+
+ }
+}
+
+
+.hero  {
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: $txt-cl-white;
+    z-index: 10;
+    
+    &__title {
+        display: block;
+        max-width: 170px;
+        
+        & .accent {
+            color: $txt-cl-title;
+            font-size: 34px;
+            line-height: 0.9;
+        }
+       
+    }
+  
+    &__btn {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @media screen and (min-width:1200px) {
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+            
+        
+    }
+
+
+    &__link {
+        display: block;
+        border: 1px solid red;
+        &:last-child {
+            margin-left: 12px;
+        }
+    }  
+    &__article {
+        display: none;
+        @media screen and (min-width:768px) {
+            display: flex;
+            
+        }
+    } 
+    
+}
+
+h1 {
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.15;
+    text-transform: uppercase
+}
+.article {
+    &__pic-place {
+        @media screen and (min-width:768px) {
+            width: 152px;
+                height: 154px;
+                background-color: aqua;
+        }
+
+        @media screen and (min-width:1200px) {
+            
+        background-color: red;
+        width: 213px;
+        height: 216px;
+        }
+    }
+
+    &__text {
+        width: 200px;
+
+               
+    }
+    &__btn {
+
+    }
+}
+.insert {
+    display: none;
+    position: absolute;
+    text-align: right;
+
+    @media screen and (min-width:768px) {
+        display: block;
+        
+        top: 0;
+        right: 0;
+        
+    }
+    &__item {
+        position: relative;
+
+    }
+    &__number {
+        font-family: $font-title;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 1.15;
+        
+        text-transform: uppercase;
+        color: $txt-cl-title;
+        z-index: 5;
+        
+    }
+
+    &__title {
+
+    }
+    &__dots {
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $bg-cl-hero-dots;
+        z-index: 0
+        ;
+    }
+}
