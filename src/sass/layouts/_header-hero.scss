@@ -1,6 +1,7 @@
 .header-hero__container {
     background-color: $bg-cl-hero;
     overflow: hidden;
+    
 
 }
 
@@ -10,7 +11,7 @@
     align-content: center;
     font-family: $font-maim;
     position: relative;
-    z-index: 10;
+    z-index: 15;
 
     &.container {
         padding-top: 8px;
@@ -93,26 +94,109 @@
     &__burger {
         border: none;
         background-color: transparent;
+        display: flex;
+            padding: 0;
+            align-items: center;
+            @media screen and (min-width:1200px) {
+                display: none;
+                
+            }
+            
     }
     
     &__buy {
-        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        &.mobile {
+            display: flex;
+            width: 209px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            @media screen and (min-width:768px) {
+                width: 186px;
+                
 
-        @media screen and (min-width:1200px) {
-            display: block;
-            margin-left: 32px;
+            }
+            
+        }
+       
+        &.position {
+            display: none;
+            width: 160px;
+            
+            @media screen and (min-width:1200px) {
+                margin-left: 32px;
+                display: flex;
+            }
         }
     }
 
 }
+
+.buy__logo {
+    width:15px;
+    height: 30px;
+}
   .burger {
     &__logo {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+            height: 30px;
         fill: $txt-cl-title;
     }
   }
  
+  .mobile-menu {
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 20px 0;
+    background-color: $bg-cl-mobile-menu;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $txt-cl-white;
+    box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 1000ms;
+    transform: translateX(0);
+
+    &.is-hidden {
+        transform: translateX(100%);
+        
+    }
+
+    &__close {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: 20px;
+
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+
+    }
+    &__link {
+        display: block;
+        padding: 11px 20px;
+        border: 1px solid $bg-cl-menu-border;
+        &:hover {
+            color: $txt-cl-title;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+        
+    }
+  }
  
  
  .icecream {
@@ -216,17 +300,46 @@
 
 
     &__link {
-        display: block;
-        border: 1px solid red;
-        height: 20px;
+        &:last-child {
+                margin-left: 12px;
+            }
+        &-a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        font-weight: 400;
+       
+        height: 24px;
         @media screen and (min-width:1200px) {
             height: 40px;
-                
-        
-            }
-        &:last-child {
-            margin-left: 12px;
+            font-size: 14px;
         }
+        &.a {
+            width: 62px;
+            background-color: $txt-cl-title ;
+            color: $txt-cl-white ;
+            @media screen and (min-width:1200px) {
+                    width: 107px;
+                }
+            &:hover, &:focus  {
+                color: $txt-cl-title;
+                background-color: $btn-cl-hover;
+            }
+        }
+                 &.b{
+                     width: 83px;
+                    
+        
+                     @media screen and (min-width:1200px) {
+                        width: 138px;
+                     }
+        
+                 }
+
+        }
+        
+       
     }  
     &__article {
         display: none;
@@ -249,13 +362,12 @@ h1 {
     &__pic-place {
         @media screen and (min-width:768px) {
             width: 152px;
-                height: 154px;
-                background-color: aqua;
+            height: 154px;
+            
         }
 
         @media screen and (min-width:1200px) {
-            
-        background-color: red;
+         
         width: 213px;
         height: 216px;
         }
@@ -327,7 +439,27 @@ h1 {
     }
 
     &__title {
-
+        font-family: $font-maim;
+        font-size: 8px;
+        line-height: 1.3;
+        @media screen and (min-width:1200px) {
+            font-size: 14px;
+            
+        }
+    }
+    &__girl {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 190px;
+        height: 150px;
+        @media screen and (max-width:767px) {
+            display: none;}
+            @media screen and (min-width:1200px) {
+                width: 304px;
+                    height: 241px;
+                
+            }
     }
 
 }
