@@ -1,0 +1,17 @@
+.title{
+    font-family: $font-title;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    color: $txt-cl-title;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @media (min-width: 768px){
+      font-size: 48px;}
+    @media (min-width: 1200px){
+      line-height: 1.14;
+      font-size: 58px;
+      letter-spacing: 0.06em;
+    }
+  }

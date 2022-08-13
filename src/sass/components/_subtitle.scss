@@ -1,0 +1,18 @@
+.subtitle {
+    font-family: $font-title;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    color: $txt-cl-subtitle;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media (min-width: 768px){
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    @media (min-width: 1200px){
+      line-height: 1.13;
+      font-size: 30px;
+      letter-spacing: 0.04em;
+    }
+  }
