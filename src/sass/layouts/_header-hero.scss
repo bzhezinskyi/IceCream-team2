@@ -38,7 +38,7 @@
         display: block;
         width: 200px;
         height: 50px;
-        background: yellow;
+        fill: $txt-cl-title;
     }
 
     &__title {}
@@ -90,8 +90,11 @@
         align-items: center;
     }
 
-    &__burger {}
-
+    &__burger {
+        border: none;
+        background-color: transparent;
+    }
+    
     &__buy {
         display: none;
 
@@ -102,36 +105,81 @@
     }
 
 }
- 
+  .burger {
+    &__logo {
+        width: 20px;
+        height: 20px;
+        fill: $txt-cl-title;
+    }
+  }
  
  
  
  .icecream {
+
+
     &__ellipse {
     position: absolute;
-    top: 83px;
+    bottom: 40px;
     left: 36px;
     width: 346px;
     height: 344px;
     border-radius: 50%;
     background-color: $bg-cl-hero-ellipse;
+    z-index: -1;
 
         @media screen and (min-width:768px) {
-                top: 43px;
+                
                 left: 248px;
                 width: 335px;
                 height: 333px;
         
             }
         @media screen and  (min-width:1200px) {
-            top: 54px;
+            bottom: 80px;
             left: 517px;
             width: 534px;
             height: 534px;
             
         }
 
- }
+    }
+    &__img {
+        display: block;
+        max-width: 100%;
+        width: 171px;
+        @media screen and (min-width:768px) {
+        
+                width: 143px;
+        
+            }
+        
+            @media screen and (min-width:1200px) {
+                width: 236px;
+        
+            }
+    }
+    &__pic {
+        position: absolute;
+        
+        bottom: 0px;
+        left: 117px;
+        z-index: -1;
+
+            @media screen and (min-width:768px) {
+            
+                    left: 322px;
+            
+                }
+            
+                @media screen and (min-width:1200px) {
+                    left: 636px;
+            
+                }
+
+
+
+    }
 }
 
 
@@ -170,6 +218,12 @@
     &__link {
         display: block;
         border: 1px solid red;
+        height: 20px;
+        @media screen and (min-width:1200px) {
+            height: 40px;
+                
+        
+            }
         &:last-child {
             margin-left: 12px;
         }
@@ -213,7 +267,21 @@ h1 {
                
     }
     &__btn {
-
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: $txt-cl-white;
+            color: $txt-cl-title ;
+        & > svg {
+            width: 6px;
+            height: 6px;
+            fill: currentColor;
+        }
     }
 }
 .insert {
