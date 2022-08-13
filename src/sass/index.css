@@ -1,0 +1,804 @@
+@charset "UTF-8";
+@import '~node_modules/modern-normalize/modern-normalize.css';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+button {
+  background: #ffffff;
+  color: #d41443;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.31;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 22px;
+  border: 0;
+  transition-property: box-shadow, background-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+button.active {
+  background-color: #ecebeb;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+button:hover, button:focus {
+  background-color: #ecebeb;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.subtitle {
+  font-family: "Titan One", sans-serif;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  color: #ffa5ba;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 1200px) {
+  .subtitle {
+    line-height: 1.13;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.title {
+  font-family: "Titan One", sans-serif;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  color: #d41443;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .title {
+    line-height: 1.14;
+    font-size: 58px;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Стилі підложки */
+.overlay {
+  /* Приховуємо підложку */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стилі модального вікна */
+.modal {
+  /* Приховуємо вікно  */
+  opacity: 0;
+  visibility: hidden;
+  /*  Встановлюємо ширину вікна  */
+  width: 100%;
+  max-width: 500px;
+  /*  Центрируємо і задаемо z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Має бути більше ніж в підложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стилі для активних класів */
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стилі для кнопки закриття */
+.modal__cross {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.header-hero__container {
+  background-color: #ffb8ca;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+.header.container {
+  padding-top: 8px;
+  padding-bottom: 135px;
+}
+@media screen and (min-width: 780px) {
+  .header.container {
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header.container {
+    padding-top: 37px;
+    padding-bottom: 60px;
+  }
+}
+.logo__svg {
+  display: block;
+  width: 200px;
+  height: 50px;
+  fill: #d41443;
+}
+.nav {
+  display: none;
+  z-index: 10;
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+.nav__list {
+  display: flex;
+}
+.nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+.nav__link {
+  color: #ffffff;
+}
+.nav__link:hover {
+  color: #d41443;
+}
+
+.header-btn__section {
+  display: flex;
+  align-items: center;
+}
+.header-btn__burger {
+  border: none;
+  background-color: transparent;
+}
+.header-btn__buy {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header-btn__buy {
+    display: block;
+    margin-left: 32px;
+  }
+}
+
+.burger__logo {
+  width: 20px;
+  height: 20px;
+  fill: #d41443;
+}
+
+.icecream__ellipse {
+  position: absolute;
+  bottom: 40px;
+  left: 36px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: #ffa5ba;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .icecream__ellipse {
+    left: 248px;
+    width: 335px;
+    height: 333px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icecream__ellipse {
+    bottom: 80px;
+    left: 517px;
+    width: 534px;
+    height: 534px;
+  }
+}
+.icecream__img {
+  display: block;
+  max-width: 100%;
+  width: 171px;
+}
+@media screen and (min-width: 768px) {
+  .icecream__img {
+    width: 143px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icecream__img {
+    width: 236px;
+  }
+}
+.icecream__pic {
+  position: absolute;
+  bottom: 0px;
+  left: 117px;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .icecream__pic {
+    left: 322px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icecream__pic {
+    left: 636px;
+  }
+}
+
+.hero {
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  z-index: 10;
+}
+.hero__title {
+  display: block;
+  max-width: 170px;
+}
+.hero__title .accent {
+  color: #d41443;
+  font-size: 34px;
+  line-height: 0.9;
+}
+.hero__btn {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+}
+.hero__link {
+  display: block;
+  border: 1px solid red;
+  height: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__link {
+    height: 40px;
+  }
+}
+.hero__link:last-child {
+  margin-left: 12px;
+}
+.hero__article {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero__article {
+    display: flex;
+  }
+}
+
+h1 {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .article__pic-place {
+    width: 152px;
+    height: 154px;
+    background-color: aqua;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article__pic-place {
+    background-color: red;
+    width: 213px;
+    height: 216px;
+  }
+}
+.article__text {
+  width: 200px;
+}
+.article__btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  color: #d41443;
+}
+.article__btn > svg {
+  width: 6px;
+  height: 6px;
+  fill: currentColor;
+}
+
+.insert {
+  display: none;
+  position: absolute;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .insert {
+    display: block;
+    top: 0;
+    right: 0;
+  }
+}
+.insert__item {
+  position: relative;
+}
+.insert__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: -1;
+}
+.insert__item:last-child {
+  margin-top: 16px;
+}
+.insert__number {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: #d41443;
+  z-index: 5;
+}
+.container {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 16px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.title-lable {
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: "Titan One", sans-serif;
+  color: #ffa5ba;
+}
+@media screen and (min-width: 1200px) {
+  .title-lable {
+    font-size: 30px;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .title-lable {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+}
+
+.title {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: "Titan One", sans-serif;
+  color: #d41443;
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+.products__title-wrap {
+  text-align: center;
+  margin-bottom: 162px;
+}
+@media screen and (min-width: 1200px) {
+  .products__title-wrap {
+    margin-bottom: 281px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__title-wrap {
+    margin-bottom: 158px;
+  }
+}
+.products__item {
+  position: relative;
+  width: calc(100% - 140px);
+  margin: 70px;
+  padding: 160px 53px 40px 53px;
+  border-radius: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .products__item {
+    width: calc((100% - 64px) / 3);
+    margin: 16px;
+    padding: 165px 64px 60px 64px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__item {
+    width: calc((100% - 32px) / 3);
+    margin: 8px;
+    padding: 118px 25px 40px 25px;
+  }
+}
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -70px;
+}
+@media screen and (min-width: 1200px) {
+  .products__list {
+    margin: -16px;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__list {
+    margin: -8px;
+    flex-wrap: nowrap;
+  }
+}
+.products__title {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: "Titan One", sans-serif;
+  color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .products__title {
+    font-size: 30px;
+    line-height: 1.14;
+  }
+}
+.products__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-family: "Titan One", sans-serif;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .products__text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__text {
+    line-height: 1.79;
+  }
+}
+.products__btn {
+  display: flex;
+  justify-content: center;
+  margin: 32px auto 0 auto;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .products__btn {
+    margin: 60px auto 0 auto;
+  }
+}
+
+.products__item-cream {
+  background-color: #ffb8ca;
+}
+.products__item-cream::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -140px;
+  display: block;
+  width: 100%;
+  height: 280px;
+  background-image: url(../src/images/products/product-1-320@1x.png);
+  background-size: 280px 280px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .products__item-cream::before {
+    background-image: url(../src/images/products/product-1-320@2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item-cream::before {
+    height: 384px;
+    top: -261px;
+    background-image: url(../src/images/products/product-1-1200@1x.png);
+    background-size: 368px 384px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .products__item-cream::before {
+    background-image: url(../src/images/products/product-1-1200@2x.png);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__item-cream::before {
+    top: -138px;
+    height: 224px;
+    background-image: url(../src/images/products/product-1-768@1x.png);
+    background-size: 224px 224px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+  .products__item-cream::before {
+    background-image: url(../src/images/products/product-1-768@2x.png);
+  }
+}
+
+.products__item-coffee {
+  background-color: #F0D1A5;
+}
+.products__item-coffee::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -140px;
+  display: block;
+  width: 100%;
+  height: 280px;
+  background-image: url(../src/images/products/product-2-320@1x.png);
+  background-size: 280px 280px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .products__item-coffee::before {
+    background-image: url(../src/images/products/product-2-320@2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item-coffee::before {
+    height: 384px;
+    top: -261px;
+    background-image: url(../src/images/products/product-2-1200@1x.png);
+    background-size: 368px 384px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .products__item-coffee::before {
+    background-image: url(../src/images/products/product-2-1200@2x.png);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__item-coffee::before {
+    top: -138px;
+    height: 224px;
+    background-image: url(../src/images/products/product-2-768@1x.png);
+    background-size: 224px 224px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+  .products__item-coffee::before {
+    background-image: url(../src/images/products/product-2-768@2x.png);
+  }
+}
+
+.products__item-milkshakes {
+  background-color: #C2E297;
+}
+.products__item-milkshakes::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -140px;
+  display: block;
+  width: 100%;
+  height: 280px;
+  background-image: url(../src/images/products/product-3-320@1x.png);
+  background-size: 280px 280px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .products__item-milkshakes::before {
+    background-image: url(../src/images/products/product-3-320@2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item-milkshakes::before {
+    height: 384px;
+    top: -261px;
+    background-image: url(../src/images/products/product-3-1200@1x.png);
+    background-size: 368px 384px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .products__item-milkshakes::before {
+    background-image: url(../src/images/products/product-3-1200@2x.png);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products__item-milkshakes::before {
+    top: -138px;
+    height: 224px;
+    background-image: url(../src/images/products/product-3-768@1x.png);
+    background-size: 224px 224px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+  .products__item-milkshakes::before {
+    background-image: url(../src/images/products/product-3-768@2x.png);
+  }
+}
+
+.products__title::after {
+  content: "";
+  display: block;
+  margin: 32px auto;
+  background-image: url();
+  width: 24.84px;
+  height: 6px;
+}/*# sourceMappingURL=index.css.map */

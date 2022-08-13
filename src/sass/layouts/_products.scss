@@ -1,0 +1,342 @@
+@mixin for-pixel-ratio-2 {
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+        @content;
+    }
+}
+
+@mixin media-min ($min-width) {
+    @media screen and (min-width:$min-width) {
+        @content;
+    }
+}
+
+.container {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include media-min(768px) {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
+    @include media-min(1200px) {
+        max-width: 1200px;
+        padding: 0 16px;
+    }
+}
+
+
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.title-lable {
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-family: 'Titan One', sans-serif;
+    color: #ffa5ba;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 1.14;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 26px;
+        line-height: 1.16;
+    }
+}
+
+.title {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'Titan One', sans-serif;
+    color: #d41443;
+
+    margin-bottom: 0px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+        line-height: 1.14;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 48px;
+    }
+}
+
+.products {
+
+    // .products__item
+    &__title-wrap {
+        text-align: center;
+
+        margin-bottom: 162px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 281px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-bottom: 158px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        width: calc(100% - 70px * 2);
+        margin: 70px;
+        padding: 160px 53px 40px 53px;
+
+        border-radius: 24px;
+
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 32px * 2) / 3);
+            margin: 16px;
+            padding: 165px 64px 60px 64px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: calc((100% - 16px * 2) / 3);
+            margin: 8px;
+            padding: 118px 25px 40px 25px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -70px;
+
+        @media screen and (min-width: 1200px) {
+            margin: -16px;
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin: -8px;
+            flex-wrap: nowrap;
+        }
+    }
+
+    // .products__title
+
+    &__title {
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-family: 'Titan One', sans-serif;
+        color: #ffffff;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 30px;
+            line-height: 1.14;
+        }
+    }
+
+    // .products__text
+
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.04em;
+        font-family: 'Titan One', sans-serif;
+        color: #ffffff;
+
+        margin-bottom: 0;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            line-height: 1.79;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+
+        margin: 32px auto 0 auto;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        border-radius: 50%;
+
+        @media screen and (min-width: 768px) {
+            margin: 60px auto 0 auto;
+        }
+    }
+}
+
+.products__item-cream {
+    background-color: #ffb8ca;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -140px;
+
+        display: block;
+        width: 100%;
+        height: 280px;
+
+        background-image: url(../src/images/products/product-1-320@1x.png);
+        background-size: 280px 280px;
+        background-repeat: no-repeat;
+
+        @include for-pixel-ratio-2 {
+            background-image: url(../src/images/products/product-1-320@2x.png);
+        }
+
+        @media screen and (min-width: 1200px) {
+            height: 384px;
+
+            top: -261px;
+
+            background-image: url(../src/images/products/product-1-1200@1x.png);
+            background-size: 368px 384px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-1-1200@2x.png);
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            top: -138px;
+            height: 224px;
+
+            background-image: url(../src/images/products/product-1-768@1x.png);
+            background-size: 224px 224px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-1-768@2x.png);
+            }
+        }
+    }
+}
+
+.products__item-coffee {
+    background-color: #F0D1A5;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -140px;
+
+        display: block;
+        width: 100%;
+        height: 280px;
+
+        background-image: url(../src/images/products/product-2-320@1x.png);
+        background-size: 280px 280px;
+        background-repeat: no-repeat;
+
+        @include for-pixel-ratio-2 {
+            background-image: url(../src/images/products/product-2-320@2x.png);
+        }
+
+        @media screen and (min-width: 1200px) {
+            height: 384px;
+
+            top: -261px;
+
+            background-image: url(../src/images/products/product-2-1200@1x.png);
+            background-size: 368px 384px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-2-1200@2x.png);
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            top: -138px;
+            height: 224px;
+
+            background-image: url(../src/images/products/product-2-768@1x.png);
+            background-size: 224px 224px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-2-768@2x.png);
+            }
+        }
+    }
+}
+
+.products__item-milkshakes {
+    background-color: #C2E297;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -140px;
+
+        display: block;
+        width: 100%;
+        height: 280px;
+
+        background-image: url(../src/images/products/product-3-320@1x.png);
+        background-size: 280px 280px;
+        background-repeat: no-repeat;
+
+        @include for-pixel-ratio-2 {
+            background-image: url(../src/images/products/product-3-320@2x.png);
+        }
+
+        @media screen and (min-width: 1200px) {
+            height: 384px;
+
+            top: -261px;
+
+            background-image: url(../src/images/products/product-3-1200@1x.png);
+            background-size: 368px 384px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-3-1200@2x.png);
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            top: -138px;
+            height: 224px;
+
+            background-image: url(../src/images/products/product-3-768@1x.png);
+            background-size: 224px 224px;
+
+            @include for-pixel-ratio-2 {
+                background-image: url(../src/images/products/product-3-768@2x.png);
+            }
+        }
+    }
+}
+
+.products__title::after {
+    content: '';
+    display: block;
+    margin: 32px auto;
+    background-image: url();
+    width: 24.84px;
+    height: 6px;
+}
