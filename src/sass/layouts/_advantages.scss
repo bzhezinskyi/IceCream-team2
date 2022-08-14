@@ -4,19 +4,11 @@
 .advantages-grid {
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   &__item {
     width: 230px;
-
-    @media screen and (min-width: 768px) {
-      width: calc((100% - 32px * 3) / 3);
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: calc((100% - 40px * 3) / 3);
-    }
   }
 
   @media screen and (max-width: 767px) {
@@ -38,26 +30,21 @@
   content: url('../images/advantages/advantages-3.png');
 }
 
-.advantages__text_axcent {
+.advantages__text_axcent.title {
   margin-top: 16px;
   margin-bottom: 20px;
-  font-family: $font-title;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  color: $txt-cl-title;
+  text-align: left;
 
   @media screen and (min-width: 768px) {
     margin-top: 36px;
     margin-bottom: 13px;
-    font-size: 48px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-top: 40px;
     margin-bottom: 16px;
-    font-size: 58px;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -81,13 +68,7 @@
   }
 }
 
-// варіант секції з макету
-.advantages-grid.advantages-grid-rev1 {
-  justify-content: flex-start;
-}
-
-.advantages-grid__item.advantages-grid__item--item1_rev1 {
-  width: 230px;
+.advantages-grid__item.advantages-grid__item--item1 {
 
   @media screen and (min-width: 768px) {
     width: 180px;
@@ -100,8 +81,7 @@
   }
 }
 
-.advantages-grid__item.advantages-grid__item--item2_rev1 {
-  width: 230px;
+.advantages-grid__item.advantages-grid__item--item2 {
 
   @media screen and (min-width: 768px) {
     width: 162px;
@@ -114,8 +94,7 @@
   }
 }
 
-.advantages-grid__item.advantages-grid__item--item3_rev1 {
-  width: 230px;
+.advantages-grid__item.advantages-grid__item--item3 {
 
   @media screen and (min-width: 768px) {
     width: 159px;
