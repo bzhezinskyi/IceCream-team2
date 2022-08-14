@@ -1,5 +1,5 @@
 <div class="header-hero__container">
-  <section class="section">
+  <section class="section header-hero">
     <div class="header container">
       <div class="logo__section">
         <svg class="logo__svg">
@@ -29,7 +29,7 @@
       </nav>
 
       <div class="header-btn__section">
-        <button class="header-btn__burger" type="button" data-modal-open>
+        <button class="header-btn__burger button" type="button" data-modal-open>
           <svg class="burger__logo">
             <use href="./images/sprite.svg#icon-menu"></use>
             <!-- змінити іконку !!!!!!!!! -->
@@ -38,14 +38,20 @@
         <!-- меню випадайка -->
 
         <div class="mobile-menu is-hidden" data-modal>
-          <button class="mobile-menu__close" type="button" data-modal-close>
-            X
+          <button
+            class="mobile-menu__close button"
+            type="button"
+            data-modal-close
+          >
+            <svg class="mobile-menu__close-logo">
+              <use href="./images/sprite.svg#icon-cross"></use>
+            </svg>
           </button>
 
           <button class="header-btn__buy mobile button" type="button">
-            Buy NOW
-            <svg class="buy__logo">
-              <use href="./images/sprite.svg#icon-greater-sign"></use>
+            Buy now
+            <svg class="buy__logo mobile">
+              <use href="./images/sprite.svg#icon-arrow-short"></use>
             </svg>
           </button>
 
@@ -70,9 +76,9 @@
 
         <!-- mobile menu end -->
         <button class="header-btn__buy position button" type="button">
-          Buy NOW
+          Buy now
           <svg class="buy__logo">
-            <use href="./images/sprite.svg#icon-greater-sign"></use>
+            <use href="./images/sprite.svg#icon-arrow-short"></use>
           </svg>
         </button>
       </div>

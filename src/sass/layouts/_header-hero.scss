@@ -4,6 +4,12 @@
     
 
 }
+.section.header-hero {
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
 
 .header {
     display: flex;
@@ -106,18 +112,24 @@
     
     &__buy {
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         height: 44px;
+        width: 160px;
+        padding-left: 37px;
+        padding-right: 37px;
         &.mobile {
             display: flex;
             width: 209px;
+            padding-left: 49px;
+                padding-right: 49px;
             margin-left: auto;
             margin-right: auto;
             margin-top: 25px;
             margin-bottom: 30px;
             @media screen and (min-width:768px) {
                 width: 186px;
-                
+                padding-left: 43px;
+                    padding-right: 43px;
 
             }
             
@@ -125,7 +137,7 @@
        
         &.position {
             display: none;
-            width: 160px;
+            
             
             @media screen and (min-width:1200px) {
                 margin-left: 32px;
@@ -137,8 +149,13 @@
 }
 
 .buy__logo {
-    width:15px;
-    height: 30px;
+    width: 8px;
+    height: 10px;
+    // margin-left: 12px;
+    // &.mobile {
+        // margin-left: 16px;
+    // }
+        
 }
   .burger {
     &__logo {
@@ -172,10 +189,22 @@
 
     &__close {
         display: block;
-        width: 20px;
-        height: 20px;
+       
         margin-left: auto;
-        margin-right: 20px;
+        margin-right: 25px;
+        padding: 0;
+        color: $txt-cl-white;
+        background-color: inherit;
+        &:hover, &:focus {
+            color: $txt-cl-title;
+        }
+        &-logo {
+            display: block;
+        width: 30px;
+            height: 30px;
+            fill: currentColor;
+           
+        }
 
     }
 
@@ -407,7 +436,7 @@ h1 {
         justify-content: center;
     }
     &__text {
-        width: 200px;
+        width: 114px;
         font-family: $font-maim;
             font-weight: 400;
             font-size: 8px;
@@ -415,6 +444,7 @@ h1 {
                 @media screen and (min-width:1200px) {
                 font-size: 14px;
                 line-height: 1.4;
+                width: 200px;
                     
                 }
 
