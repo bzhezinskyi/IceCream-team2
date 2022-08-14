@@ -12,6 +12,15 @@
     width: 54px;
     height: 40px;
     background-image: url(../images/reviews/double-comma.png);
+
+    @media screen and (min-width: 768px) {
+      top: 125px;
+      left: 80px;
+    }
+    @media screen and (min-width: 1200px) {
+      top: 133px;
+      left: 195px;
+    }
   }
   &__box {
     position: relative;
@@ -20,12 +29,35 @@
     flex-wrap: wrap;
   }
   &__photo {
-    margin-bottom: 32px;
+    margin-bottom: 75px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 57px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 63px;
+    }
   }
+
   &__txt-box {
-    margin: 43px 50px 0 50px;
-    margin-bottom: 36px;
     position: relative;
+
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 36px;
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-bottom: 24px;
+      padding: 0 45px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 190px;
+      margin-left: 190px;
+      margin-bottom: 36px;
+      padding: 0 35px;
+    }
 
     background: repeating-linear-gradient(
       $bg-cl-transparent,
@@ -37,17 +69,21 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -16px;
       left: 50%;
       transform: translateX(-50%);
       width: 32px;
       height: 4px;
 
       background-image: url(../images/reviews/dots.svg);
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: -4px;
+      }
     }
   }
   &__txt {
-    padding: 0 15px;
+    // padding: 0 15px;
     padding-bottom: 26px;
 
     font-weight: 500;
@@ -55,14 +91,27 @@
     line-height: 2.55;
     text-align: center;
     z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 2.16;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.86;
+    }
   }
   &__name {
     margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
   }
   &__card {
   }
 }
 
+// slick style
 .slick-dots li {
   margin: 0 9px;
 }
@@ -77,7 +126,7 @@
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus {
-  opacity: 0.8;
+  background-color: $btn-cl-hover;
 }
 
 .slick-dots li.slick-active button {
