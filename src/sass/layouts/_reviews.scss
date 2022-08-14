@@ -1,0 +1,95 @@
+.reviews {
+  margin-top: 0;
+}
+
+.reviews-card {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 147px;
+    left: 53px;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews/double-comma.png);
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__photo {
+    margin-bottom: 32px;
+  }
+  &__txt-box {
+    margin: 43px 50px 0 50px;
+    margin-bottom: 36px;
+    position: relative;
+
+    background: repeating-linear-gradient(
+      $bg-cl-transparent,
+      $bg-cl-transparent 30px,
+      $bg-cl-footer-border 30px,
+      $bg-cl-footer-border 31px
+    );
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 4px;
+
+      background-image: url(../images/reviews/dots.svg);
+    }
+  }
+  &__txt {
+    padding: 0 15px;
+    padding-bottom: 26px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+    z-index: 2;
+  }
+  &__name {
+    margin-bottom: 16px;
+  }
+  &__card {
+  }
+}
+
+.slick-dots li {
+  margin: 0 9px;
+}
+.slick-dots li button {
+  background-color: $bg-cl-dots;
+  padding: 0;
+  border-radius: 50%;
+
+  &::before {
+    color: inherit;
+  }
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  opacity: 0.8;
+}
+
+.slick-dots li.slick-active button {
+  background-color: transparent;
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+
+    background-image: url(../images/reviews/home.svg);
+    background-repeat: no-repeat;
+    fill: $bg-cl-dots-active;
+    opacity: 1;
+  }
+}

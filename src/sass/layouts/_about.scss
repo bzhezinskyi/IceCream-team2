@@ -1,0 +1,87 @@
+.about{
+    background-color: $bg-cl-about;
+    position: relative;
+
+    &__bg-desctop{
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        left: 0;
+        right: 0;
+
+        @media (max-width: 1199px){
+            display: none;
+          
+          }
+    }
+
+    
+    &__title-box{
+        display: grid;
+        margin-bottom: 32px;
+    }
+    &__label{
+        margin-bottom: 15px;
+    }
+    &__cow-box{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    &__img{
+        width: 280px;
+    }
+    &__box{
+        position: relative;
+    }
+    &__bg-mobile{
+        position: absolute;
+        top: 22%;
+        left: 0;
+        right: 0;
+
+    }
+    &__bg-mob{
+        width: 100%;
+        z-index: -2;
+        @media (min-width: 768px){
+            display: none;
+          
+          }
+    }
+    &__text-box{
+        width: 220px;
+        margin-bottom: 40px;
+    }
+    &__text{
+        font-family: $font-maim ;
+        font-size: 12px;
+        line-height: 1.58;
+        font-weight: 500;
+    }
+    &__description-box{
+        width: 220px;
+        margin-bottom: 20px;
+    }
+    &__description{
+        font-family: $font-maim ;
+        font-size: 12px;
+        line-height: 1.58;
+        font-weight: 500;
+        color: $txt-cl-secondary;
+    }
+    &__paragraph{
+        margin-top: 10px;
+
+    }
+    &__button{
+        padding:  10px 37px;
+
+    }
+    &__icon{
+        width: 8px;
+        height: 10px;
+        margin-left: 14px;
+        fill: $btn-cl-accent;
+    }
+}
