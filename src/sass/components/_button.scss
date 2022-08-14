@@ -1,24 +1,31 @@
-button {
-    background: $btn-cl-white;
-    color: $txt-cl-title;
-    font-family: $font-maim;
-    font-size: 16px;
-    line-height: 1.31;
-    font-weight: 700;
-    text-align: center; 
-    cursor: pointer;
-    border-radius: 22px;
-    border: 0;
-    transition-property: box-shadow, background-color ;
-    transition: $animations;
-    &.active{
-      background-color: $btn-cl-hover;
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
-    &:hover,
-    &:focus{
-        background-color: $btn-cl-hover;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
+.button {
+  background: $btn-cl-white;
+  color: $txt-cl-title;
+  fill: $txt-cl-title;
+  font-family: $font-maim;
+  font-size: 16px;
+  line-height: 1.31;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 22px;
+  border: 0;
+  transition-property: box-shadow, background-color;
+  transition: $animations;
+
+  &.active {
+    background-color: $btn-cl-hover;
+    
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 
+  &:hover,
+  &:focus {
+    background-color: $btn-cl-hover;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  }
+}
