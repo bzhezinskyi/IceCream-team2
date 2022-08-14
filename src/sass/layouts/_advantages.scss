@@ -1,0 +1,106 @@
+.advantages {
+  background-color: $bg-cl-about;
+}
+.advantages-grid {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    width: 230px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.advantages-grid__item--item1::before {
+  content: url('../images/advantages/advantages-1.png');
+}
+
+.advantages-grid__item--item2::before {
+  content: url('../images/advantages/advantages-2.png');
+}
+
+.advantages-grid__item--item3::before {
+  content: url('../images/advantages/advantages-3.png');
+}
+
+.advantages__text_axcent.title {
+  margin-top: 16px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 36px;
+    margin-bottom: 13px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.advantages__text {
+  font-family: $font-maim;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: $txt-cl-main;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02;
+  }
+}
+
+.advantages-grid__item.advantages-grid__item--item1 {
+
+  @media screen and (min-width: 768px) {
+    width: 180px;
+    margin-right: 4px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 288px;
+    margin-right: 115px;
+  }
+}
+
+.advantages-grid__item.advantages-grid__item--item2 {
+
+  @media screen and (min-width: 768px) {
+    width: 162px;
+    margin-right: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 317px;
+    margin-right: 80px;
+  }
+}
+
+.advantages-grid__item.advantages-grid__item--item3 {
+
+  @media screen and (min-width: 768px) {
+    width: 159px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 288px;
+  }
+}
