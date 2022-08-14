@@ -15,7 +15,7 @@
 
     &.container {
         padding-top: 8px;
-        padding-bottom: 135px;
+        padding-bottom: 60px;
 
         @media screen and (min-width:780px) {
             padding-top: 32px;
@@ -166,7 +166,7 @@
     transform: translateX(0);
 
     &.is-hidden {
-        transform: translateX(100%);
+        transform: translateX(115%);
         
     }
 
@@ -273,15 +273,44 @@
     letter-spacing: 0.04em;
     color: $txt-cl-white;
     z-index: 10;
+
+    &.container {
+        
+    padding-top: 0px;
+    padding-bottom: 158px;
+
+        @media screen and (min-width:768px) {
+                padding-bottom: 16px;
+        
+            }
+                        @media screen and (min-width:1200px) {
+                            padding-bottom: 60px;
+            
+                        }
+}
     
     &__title {
         display: block;
-        max-width: 170px;
+        max-width: 220px;
+        font-size: 26px;
+        line-height: 1.15;
+        @media screen and (min-width:768px) {
+                font-size: 22px;
+                max-width: 165px;
+            }
+        @media screen and (min-width:1200px) {
+            max-width: 277px;
+                font-size: 38px;
+            }
+       
         
         & .accent {
             color: $txt-cl-title;
             font-size: 34px;
             line-height: 0.9;
+            @media screen and (min-width:1200px) {
+                font-size: 58px;
+            }
         }
        
     }
@@ -372,13 +401,27 @@ h1 {
         height: 216px;
         }
     }
-
+    &__contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &__text {
         width: 200px;
+        font-family: $font-maim;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 1.5;
+                @media screen and (min-width:1200px) {
+                font-size: 14px;
+                line-height: 1.4;
+                    
+                }
 
                
     }
     &__btn {
+        margin-top: 20px;
         width: 20px;
         height: 20px;
         padding: 0;
@@ -389,6 +432,13 @@ h1 {
             border: none;
             background-color: $txt-cl-white;
             color: $txt-cl-title ;
+            @media screen and (min-width:768px) {
+                margin-top: 8px;
+                
+            }
+        @media screen and (min-width:1200px) {
+            margin-top: 20px;
+        }
         & > svg {
             width: 6px;
             height: 6px;
