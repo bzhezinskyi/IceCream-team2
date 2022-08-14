@@ -69,6 +69,7 @@
 .slick-dots li button {
   background-color: $bg-cl-dots;
   padding: 0;
+  border-radius: 50%;
 
   &::before {
     color: inherit;
