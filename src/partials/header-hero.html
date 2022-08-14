@@ -100,6 +100,13 @@
         />
         <source
           srcset="
+            ./images/hero//hero-ice-cream-1200@2x.png 2x,
+            ./images/hero/hero-ice-cream-1200@1x.png  1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
             ./images/hero//hero-ice-cream-768@2x.webp 2x,
             ./images/hero/hero-ice-cream-768@1x.webp  1x
           "
@@ -108,11 +115,25 @@
         />
         <source
           srcset="
+            ./images/hero//hero-ice-cream-768@2x.png 2x,
+            ./images/hero/hero-ice-cream-768@1x.png  1x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
             ./images/hero//hero-ice-cream-320@2x.webp 2x,
             ./images/hero/hero-ice-cream-320@1x.webp  1x
           "
           media="(min-width: 320px)"
           type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-320@2x.png 2x,
+            ./images/hero/hero-ice-cream-320@1x.png  1x
+          "
+          media="(min-width: 320px)"
         />
         <img
           class="icecream__img"
@@ -138,7 +159,37 @@
     <article class="hero__article">
       <div class="article__pic-place">
         <picture>
-          <source />
+          <source
+            srcset="
+              ./images/hero//hero-milk-1200@2x.webp 2x,
+              ./images/hero/hero-milk-1200@1x.webp  1x
+            "
+            media="(min-width: 1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero//hero-milk-1200@2x.png 2x,
+              ./images/hero/hero-milk-1200@1x.png  1x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero//hero-milk-768@2x.webp 2x,
+              ./images/hero/hero-milk-768@1x.webp  1x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero//hero-milk-768@2x.png 2x,
+              ./images/hero/hero-milk-768@1x.png  1x
+            "
+            media="(min-width: 768px)"
+          />
+
           <img src="./images/hero/hero-milk-1200@1x.png" alt=" milk splited" />
         </picture>
       </div>
@@ -158,17 +209,47 @@
 
     <ul class="insert list">
       <li class="cafes insert__item">
-        <p class="insert__number">16</p>
+        <p class="insert__number" id="cafe-count">16</p>
         <p class="insert__title">cafes</p>
       </li>
       <li class="tracks insert__item">
-        <p class="insert__number">23</p>
+        <p class="insert__number" id="track-count">23</p>
         <p class="insert__title">food-tracks</p>
       </li>
     </ul>
     <div class="insert__girl">
       <picture>
-        <source />
+        <source
+          srcset="
+            ./images/hero//hero-girl-1200@2x.webp 2x,
+            ./images/hero/hero-girl-1200@1x.webp  1x
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-1200@2x.png 2x,
+            ./images/hero/hero-girl-1200@1x.png  1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-768@2x.webp 2x,
+            ./images/hero/hero-girl-768@1x.webp  1x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-768@2x.png 2x,
+            ./images/hero/hero-girl-768@1x.png  1x
+          "
+          media="(min-width: 768px)"
+        />
+
         <img src="./images/hero/hero-girl-1200@1x.png" alt=" summer girl" />
       </picture>
     </div>
