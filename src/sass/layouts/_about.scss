@@ -1,6 +1,10 @@
 .about{
-    background-color: $bg-cl-about;
-    position: relative;
+    &__box-container{
+        background-color: $bg-cl-about;
+        position: relative;
+
+    }
+
 
     &__bg-desctop{
         position: absolute;
