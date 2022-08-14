@@ -1,45 +1,108 @@
-<section class="about container"> 
-    <div class="about__bg-desctop">
-        <picture class="about__img">
-            <source srcset="/src/images/about/about-milk-bg-1200@1x.webp 1x, /src/images/about/about-milk-bg-1200@2x.webp" media="(min-width: 1200px)" type="image/webp">
-            <img class="about__bg-image" src="/src/images/about/about-milk-bg-1200@1x.png" alt="milk-bg">
-            </picture>
+<section class="about container" id="how-made">
+  <div class="about__bg-desctop">
+    <picture class="about__img">
+      <source
+        srcset="
+          /src/images/about/about-milk-bg-1200@1x.webp 1x,
+          /src/images/about/about-milk-bg-1200@2x.webp
+        "
+        media="(min-width: 1200px)"
+        type="image/webp"
+      />
+      <img
+        class="about__bg-image"
+        src="/src/images/about/about-milk-bg-1200@1x.png"
+        alt="milk-bg"
+      />
+    </picture>
+  </div>
+  <div class="about__container section">
+    <div class="about__title-box">
+      <label class="subtitle about__label" for="about__titel"
+        >tradition and love</label
+      >
+      <h2 class="title about__title" id="about__titel">how it’s made?</h2>
     </div>
-    <div class="about__container  section">
-        <div class="about__title-box">
-            <label class="subtitle about__label" for="about__titel">tradition and love</label>
-            <h2 class="title about__title" id="about__titel">how it’s made?</h2>
-        </div>
-        <div class="about__cow-box">
-        <picture class="about__img">
-            <source srcset="/src/images/about/about-cow-1200@1x.webp 1x, /src/images/about/about-cow-1200@2x.webp" media="(min-width: 1200px)" type="image/webp">
-            <source srcset="/src/images/about/about-cow-768@1x.webp 1x, /src/images/about/about-cow-768@2x.webp" media="(min-width: 768px)" type="image/webp">
-            <source srcset="/src/images/about/about-cow-320@1x.webp 1x, /src/images/about/about-cow-320@2x.webp" media="(min-width: 320px)" type="image/webp">
-            <img class="about__img-cow" src="/src/images/about/about-cow-1200@1x.png" alt="image-cow">
-           </picture>
-        </div>
-        <div class="about__box">
-            <div class="about__bg-mobile">
-                <picture>
-                    <source srcset="/src/images/about/about-milk-bg-320@1x.webp 1x, /src/images/about/about-milk-bg-320@2x.webp" media="(min-width: 320px)" type="image/webp">
-                    <img class="about__bg-mob" src="/src/images/about/about-milk-bg-320@1x.png" alt="milk-bg-mobile">
-                </picture>
-            </div>
-            <div class="about__text-box">
-                <p class="about__text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
-            </div>
-            <div class="about__description-box">
-                <p class="about__description">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt. </p>
-                <p class="about__description about__paragraph">Aliquam erat volutpat. Aenean accumsan.</p>
-            </div>
-            <div class="about__button-box">
-                <button class="about__button button" type="button">Read more  
-                    <svg class="about__icon">
-                    <use class="about__icon-button" href="/src/images/sprite.svg#icon-arrow-short"></use>
-                  </svg>
-                </button>
-            </div>
-        </div>
-        
-</div>
-</section>  
+    <div class="about__cow-box">
+      <picture class="about__img">
+        <source
+          srcset="
+            /src/images/about/about-cow-1200@1x.webp 1x,
+            /src/images/about/about-cow-1200@2x.webp
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            /src/images/about/about-cow-768@1x.webp 1x,
+            /src/images/about/about-cow-768@2x.webp
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            /src/images/about/about-cow-320@1x.webp 1x,
+            /src/images/about/about-cow-320@2x.webp
+          "
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <img
+          class="about__img-cow"
+          src="/src/images/about/about-cow-1200@1x.png"
+          alt="image-cow"
+        />
+      </picture>
+    </div>
+    <div class="about__box">
+      <div class="about__bg-mobile">
+        <picture>
+          <source
+            srcset="
+              /src/images/about/about-milk-bg-320@1x.webp 1x,
+              /src/images/about/about-milk-bg-320@2x.webp
+            "
+            media="(min-width: 320px)"
+            type="image/webp"
+          />
+          <img
+            class="about__bg-mob"
+            src="/src/images/about/about-milk-bg-320@1x.png"
+            alt="milk-bg-mobile"
+          />
+        </picture>
+      </div>
+      <div class="about__text-box">
+        <p class="about__text">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+      </div>
+      <div class="about__description-box">
+        <p class="about__description">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+        </p>
+        <p class="about__description about__paragraph">
+          Aliquam erat volutpat. Aenean accumsan.
+        </p>
+      </div>
+      <div class="about__button-box">
+        <button class="about__button button" type="button">
+          Read more
+          <svg class="about__icon">
+            <use
+              class="about__icon-button"
+              href="/src/images/sprite.svg#icon-arrow-short"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

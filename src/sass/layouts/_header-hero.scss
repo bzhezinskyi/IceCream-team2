@@ -1,12 +1,14 @@
-.header-hero__container {
-    background-color: $bg-cl-hero;
-    overflow: hidden;
+// .header-hero__container {
+//     background-color: $bg-cl-hero;
+//     overflow: hidden;
     
 
-}
+// }
 .section.header-hero {
     padding-top: 0;
     padding-bottom: 0;
+    background-color: $bg-cl-hero;
+        overflow: hidden;
 
 }
 
