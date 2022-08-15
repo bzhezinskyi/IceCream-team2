@@ -1,170 +1,266 @@
-<div class="header-hero__container">
-  <section class="section">
-    <div class="header container">
-      <div class="logo__section">
-        <svg class="logo__svg">
-          <use href="./images/sprite.svg#icon-logo"></use>
-        </svg>
-        <span class="logo__title"></span>
-      </div>
-
-      <nav class="nav">
-        <ul class="nav__list list">
-          <li class="nav__item">
-            <a class="nav__link link" href="#">Home</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="#">About us</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="#">How it's made?</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="#">Our products</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header-btn__section">
-        <button class="header-btn__burger" type="button" data-modal-open>
-          <svg class="burger__logo">
-            <use href="./images/sprite.svg#icon-menu"></use>
-            <!-- змінити іконку !!!!!!!!! -->
-          </svg>
-        </button>
-        <!-- меню випадайка -->
-
-        <div class="mobile-menu is-hidden" data-modal>
-          <button class="mobile-menu__close" type="button" data-modal-close>
-            X
-          </button>
-
-          <button class="header-btn__buy mobile button" type="button">
-            Buy NOW
-            <svg class="buy__logo">
-              <use href="./images/sprite.svg#icon-greater-sign"></use>
-            </svg>
-          </button>
-
-          <ul class="mobile-menu__list list">
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link link">Home</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link link">About us</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link link">How it’s made?</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link link">Our products</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link link">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- mobile menu end -->
-        <button class="header-btn__buy position button" type="button">
-          Buy NOW
-          <svg class="buy__logo">
-            <use href="./images/sprite.svg#icon-greater-sign"></use>
-          </svg>
-        </button>
-      </div>
+<!-- <div class="header-hero__container"> -->
+<section class="section header-hero" id="header-hero">
+  <div class="header container">
+    <div class="logo__section">
+      <svg class="logo__svg">
+        <use href="./images/sprite.svg#icon-logo"></use>
+      </svg>
+      <span class="logo__title"></span>
     </div>
 
-    <div class="hero container">
-      <div class="icecream__ellipse"></div>
-      <div class="icecream__pic">
+    <nav class="nav">
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link link" href="#hero">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#about">About us</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#how-made">How it's made?</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#products">Our products</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-btn__section">
+      <button class="header-btn__burger button" type="button" data-modal-open>
+        <svg class="burger__logo">
+          <use href="./images/sprite.svg#icon-menu"></use>
+          <!-- змінити іконку !!!!!!!!! -->
+        </svg>
+      </button>
+      <!-- меню випадайка -->
+
+      <div class="mobile-menu is-hidden" data-modal>
+        <button
+          class="mobile-menu__close button"
+          type="button"
+          data-modal-close
+        >
+          <svg class="mobile-menu__close-logo">
+            <use href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <button
+          class="header-btn__buy mobile button js-open-modal"
+          data-modal="1"
+          type="button"
+        >
+          Buy now
+          <svg class="buy__logo mobile">
+            <use href="./images/sprite.svg#icon-arrow-short"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a href="#hero" class="mobile-menu__link link">Home</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#about" class="mobile-menu__link link">About us</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#how-made" class="mobile-menu__link link"
+              >How it’s made?</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#products" class="mobile-menu__link link">Our products</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- mobile menu end -->
+      <button
+        class="header-btn__buy position button js-open-modal"
+        data-modal="1"
+        type="button"
+      >
+        Buy now
+        <svg class="buy__logo">
+          <use href="./images/sprite.svg#icon-arrow-short"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="hero container" id="hero">
+    <div class="icecream__ellipse"></div>
+    <div class="icecream__pic">
+      <picture>
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-1200@2x.webp 2x,
+            ./images/hero/hero-ice-cream-1200@1x.webp  1x
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-1200@2x.png 2x,
+            ./images/hero/hero-ice-cream-1200@1x.png  1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-768@2x.webp 2x,
+            ./images/hero/hero-ice-cream-768@1x.webp  1x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-768@2x.png 2x,
+            ./images/hero/hero-ice-cream-768@1x.png  1x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-320@2x.webp 2x,
+            ./images/hero/hero-ice-cream-320@1x.webp  1x
+          "
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-ice-cream-320@2x.png 2x,
+            ./images/hero/hero-ice-cream-320@1x.png  1x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="icecream__img"
+          src="./images/hero/hero-ice-cream-1200@1x.png"
+          alt="lovely big icecream"
+        />
+      </picture>
+    </div>
+    <h1 class="hero__title">
+      ice cream made with <span class="accent"> passion </span>
+    </h1>
+    <ul class="hero__btn list">
+      <li class="hero__link">
+        <a href="#products" class="hero__link-a a link button">Products</a>
+      </li>
+      <li class="hero__link">
+        <a href="#how-made" class="hero__link-a b link button"
+          >How it’s made?</a
+        >
+      </li>
+    </ul>
+
+    <div class="hero__article">
+      <div class="article__pic-place">
         <picture>
           <source
             srcset="
-              ./images/hero//hero-ice-cream-1200@2x.webp 2x,
-              ./images/hero/hero-ice-cream-1200@1x.webp  1x
+              ./images/hero//hero-milk-1200@2x.webp 2x,
+              ./images/hero/hero-milk-1200@1x.webp  1x
             "
             media="(min-width: 1200px)"
             type="image/webp"
           />
           <source
             srcset="
-              ./images/hero//hero-ice-cream-768@2x.webp 2x,
-              ./images/hero/hero-ice-cream-768@1x.webp  1x
+              ./images/hero//hero-milk-1200@2x.png 2x,
+              ./images/hero/hero-milk-1200@1x.png  1x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero//hero-milk-768@2x.webp 2x,
+              ./images/hero/hero-milk-768@1x.webp  1x
             "
             media="(min-width: 768px)"
             type="image/webp"
           />
           <source
             srcset="
-              ./images/hero//hero-ice-cream-320@2x.webp 2x,
-              ./images/hero/hero-ice-cream-320@1x.webp  1x
+              ./images/hero//hero-milk-768@2x.png 2x,
+              ./images/hero/hero-milk-768@1x.png  1x
             "
-            media="(min-width: 320px)"
-            type="image/webp"
+            media="(min-width: 768px)"
           />
-          <img
-            class="icecream__img"
-            src="./images/hero/hero-ice-cream-1200@1x.png"
-            alt="lovely big icecream"
-          />
+
+          <img src="./images/hero/hero-milk-1200@1x.png" alt=" milk splited" />
         </picture>
       </div>
-      <h1 class="hero__title">
-        ice cream made with <span class="accent"> passion </span>
-      </h1>
-      <ul class="hero__btn list">
-        <li class="hero__link">
-          <a href="#" class="hero__link-a a link button">Products</a>
-        </li>
-        <li class="hero__link">
-          <a href="#" class="hero__link-a b link button">How it’s made?</a>
-        </li>
-      </ul>
 
-      <article class="hero__article">
-        <div class="article__pic-place">
-          <picture>
-            <source />
-            <img
-              src="./images/hero/hero-milk-1200@1x.png"
-              alt=" milk splited"
-            />
-          </picture>
-        </div>
-
-        <div class="article__contain">
-          <p class="article__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quas
-            officiis quia beatae velit nihil?
-          </p>
-          <button class="article__btn">
-            <svg class="">
-              <use href="./images/sprite.svg#icon-right-arrow"></use>
-            </svg>
-          </button>
-        </div>
-      </article>
-
-      <ul class="insert list">
-        <li class="cafes insert__item">
-          <p class="insert__number">16</p>
-          <p class="insert__title">cafes</p>
-        </li>
-        <li class="tracks insert__item">
-          <p class="insert__number">23</p>
-          <p class="insert__title">food-tracks</p>
-        </li>
-      </ul>
-      <div class="insert__girl">
-        <picture>
-          <source />
-          <img src="./images/hero/hero-girl-1200@1x.png" alt=" summer girl" />
-        </picture>
+      <div class="article__contain">
+        <p class="article__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quas
+          officiis quia beatae velit nihil?
+        </p>
+        <button class="article__btn">
+          <svg class="">
+            <use href="./images/sprite.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
-  </section>
-</div>
+
+    <ul class="insert list">
+      <li class="cafes insert__item">
+        <p class="insert__number" id="cafe-count">16</p>
+        <p class="insert__title">cafes</p>
+      </li>
+      <li class="tracks insert__item">
+        <p class="insert__number" id="track-count">23</p>
+        <p class="insert__title">food-tracks</p>
+      </li>
+    </ul>
+    <div class="insert__girl">
+      <picture>
+        <source
+          srcset="
+            ./images/hero//hero-girl-1200@2x.webp 2x,
+            ./images/hero/hero-girl-1200@1x.webp  1x
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-1200@2x.png 2x,
+            ./images/hero/hero-girl-1200@1x.png  1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-768@2x.webp 2x,
+            ./images/hero/hero-girl-768@1x.webp  1x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/hero//hero-girl-768@2x.png 2x,
+            ./images/hero/hero-girl-768@1x.png  1x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <img src="./images/hero/hero-girl-1200@1x.png" alt=" summer girl" />
+      </picture>
+    </div>
+  </div>
+</section>
+<!-- </div> -->
