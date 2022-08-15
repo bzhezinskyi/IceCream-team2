@@ -1,13 +1,18 @@
 .about{
     background: linear-gradient($txt-cl-white, $bg-cl-about);
     position: relative;
-
     &__bg-desctop{
-        position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+
+    }
+
+    &__bg-desctop-img{
+
         width: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
+
 
         @media (max-width: 1199px){
             display: none;
@@ -17,6 +22,9 @@
         @media (min-width: 768px){
             display: flex;;
           }
+    }
+    &__bg-image{
+      width: 100%;
     }
 
     
