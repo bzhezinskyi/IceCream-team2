@@ -20,6 +20,9 @@
     font-family: $font-maim;
     position: relative;
     z-index: 15;
+    // затримка появи ХЕДЕРУ
+    opacity: 0;
+        animation: opacity 1s forwards 2s;
 
     &.container {
         padding-top: 8px;
@@ -152,13 +155,10 @@
 .buy__logo {
     width: 8px;
     height: 10px;
-    // margin-left: 12px;
-    // &.mobile {
-        // margin-left: 16px;
-    // }
-        
+    
 }
-  .burger {
+
+.burger {
     &__logo {
         width: 30px;
             height: 30px;
@@ -179,6 +179,8 @@
     border-radius: 50%;
     background-color: $bg-cl-hero-ellipse;
     z-index: -1;
+    // 
+        animation: pulsing 1s forwards;
 
         @media screen and (min-width:768px) {
                 
@@ -262,6 +264,7 @@
         max-width: 220px;
         font-size: 26px;
         line-height: 1.15;
+    
         @media screen and (min-width:768px) {
                 font-size: 22px;
                 max-width: 165px;
@@ -273,11 +276,23 @@
        
         
         & .accent {
+            display: flex;  //для анімації
+            white-space: nowrap; //для анімації
+            overflow: hidden; //для анімації
             color: $txt-cl-title;
             font-size: 34px;
             line-height: 0.9;
+            width: 7ch;//для анімації
+            // анімація появи
+            animation: title-print  500ms  steps(8)  2000ms;
+                @media screen and (max-width:767px) {
+                        opacity: 0;
+                        animation: opacity 1s forwards 1s;
+                
+                    }
             @media screen and (min-width:1200px) {
                 font-size: 58px;
+                
             }
         }
        
@@ -287,6 +302,9 @@
         display: flex;
         margin-top: 20px;
         margin-bottom: 20px;
+        // затримка появи лінков під заголовком
+            opacity: 0;
+            animation: opacity 1s forwards 3s;
         @media screen and (min-width:1200px) {
             margin-top: 24px;
             margin-bottom: 40px;
@@ -298,7 +316,7 @@
 
     &__link {
         &:last-child {
-                margin-left: 12px;
+            margin-left: 12px;
             }
         &-a {
         display: flex;
@@ -312,6 +330,7 @@
             height: 40px;
             font-size: 14px;
         }
+        // кнопка 1
         &.a {
             width: 62px;
             background-color: $txt-cl-title ;
@@ -324,15 +343,15 @@
                 background-color: $btn-cl-hover;
             }
         }
-                 &.b{
-                     width: 83px;
-                    
+        // кнопка 2
+        &.b{
+            width: 83px;
+                  
+            @media screen and (min-width:1200px) {
+                width: 138px;
+                }
         
-                     @media screen and (min-width:1200px) {
-                        width: 138px;
-                     }
-        
-                 }
+            }
 
         }
         
@@ -359,6 +378,7 @@ h1 {
 // блочна вставка з картинкою, текстом і кнопкою в нижній лівій частині Хіро
 .article {
     &__pic-place {
+        
         @media screen and (min-width:768px) {
             width: 152px;
             height: 154px;
@@ -375,34 +395,42 @@ h1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        // затримка появи контейнеру з текстом поряд з молоком
+        opacity: 0;
+            animation: opacity 1s forwards 3s;
+    }
+    &__pic {
+            position: absolute;
+            // milk appear animation
+            transform: translateX(-200%);
+            animation: move-milk 1s forwards 2s;
     }
     &__text {
         width: 114px;
         font-family: $font-maim;
-            font-weight: 400;
-            font-size: 8px;
-            line-height: 1.5;
-                @media screen and (min-width:1200px) {
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+            @media screen and (min-width:1200px) {
                 font-size: 14px;
                 line-height: 1.4;
                 width: 200px;
                     
                 }
-
-               
-    }
+      
+        }
     &__btn {
         margin-top: 20px;
         width: 20px;
         height: 20px;
         padding: 0;
         border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: none;
-            background-color: $txt-cl-white;
-            color: $txt-cl-title ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: $txt-cl-white;
+        color: $txt-cl-title ;
             @media screen and (min-width:768px) {
                 margin-top: 8px;
                 
@@ -423,6 +451,7 @@ h1 {
     display: none;
     position: absolute;
     text-align: right;
+    
 
     @media screen and (min-width:768px) {
         display: block;
@@ -431,6 +460,9 @@ h1 {
         
     }
     &__item {
+        // анімована поява лічильників з затримкою
+        opacity: 0;
+            animation: opacity 1s forwards 3s;
         
         position: relative;
         &::before {
@@ -443,6 +475,7 @@ h1 {
             border-radius: 50%;
             background-color: $bg-cl-hero-dots;
             z-index: -1;
+
         }
         &:last-child {
             margin-top: 16px;
@@ -476,6 +509,9 @@ h1 {
         right: 0;
         width: 190px;
         height: 150px;
+        // анімація появи дівчинки
+        transform: translateX(100%);
+        animation: girl 1s forwards 1000ms;
         @media screen and (max-width:767px) {
             display: none;}
             @media screen and (min-width:1200px) {
@@ -483,6 +519,7 @@ h1 {
                 height: 241px;
                 
             }
+     
     }
 
 }
