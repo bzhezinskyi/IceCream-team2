@@ -1,56 +1,59 @@
-<section class="gallery section" id="gallery">
-  <h2 class="visually-hidden">gallery</h2>
-  <div class="gallery__container">
-    <picture>
-      <source
-        srcset="
-          ./images/gallery/desktop/gallery.webp    1x,
-          ./images/gallery/desktop/gallery@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width:1200px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/desktop/gallery.png    1x,
-          ./images/gallery/desktop/gallery@2x.png 2x
-        "
-        media="(min-width:1200px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/tablets/gallery-tab.webp    1x,
-          ./images/gallery/tablets/gallery-tab@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/tablets/gallery-tab.png    1x,
-          ./images/gallery/tablets/gallery-tab@2x.png 2x
-        "
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/mobile/gallery-mob.webp    1x,
-          ./images/gallery/mobile/gallery-mob@2x.webp 2x
-        "
-        type="image/webp"
-        media="(max-width:767px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/mobile/gallery-mob.png    1x,
-          ./images/gallery/mobile/gallery-mob@2x.png 2x
-        "
-        media="(max-width:767px)"
-      />
-      <img
-        src="./images/gallery/desktop/gallery.png"
-        alt="галерея картинок мороженого"
-      />
-    </picture>
+<section class="section gallery" id="gallery">
+  <div class="container gallery">
+    <h2 class="visually-hidden">gallery</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-grid__column col1">
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-01-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-02-1200@1x.jpg" alt="" />
+        </div>
+
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-03-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="gallery-grid__column gallery-grid__column">
+        <div class="gallery-grid__item gallery-grid__item--wide">
+          <img src="./images/gallery/gallery-04-1200@1x.jpg" alt="" />
+        </div>
+
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-05-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-06-1200@1x.jpg" alt="" />
+        </div>
+
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-07-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-08-1200@1x.jpg" alt="" />
+        </div>
+
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-09-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <img src="./images/gallery/gallery-10-1200@1x.jpg" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
