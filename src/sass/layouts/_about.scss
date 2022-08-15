@@ -1,161 +1,148 @@
-.about{
-    background: linear-gradient($txt-cl-white, $bg-cl-about);
+.about {
+  background-image: linear-gradient(#fff, #fff5f6);
+  position: relative;
+  &__bg-desctop {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  &__bg-desctop-img {
+    width: 100%;
+  }
+  &__main {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__bg-image {
+    width: 100%;
+  }
+
+  &__title-box {
+    display: grid;
+    margin-bottom: 32px;
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+    @media (min-width: 1200px) {
+      margin-bottom: 60px;
+    }
+  }
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__cow-box {
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 99px;
+    }
+  }
+  &__img {
+    width: 280px;
+    @media (min-width: 768px) {
+      width: 336px;
+    }
+    @media (min-width: 1200px) {
+      width: 500px;
+    }
+  }
+  &__box {
     position: relative;
-    &__bg-desctop{
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-      @media (max-width: 1199px){
-        display: none;
-      }
+    @media (min-width: 1200px) {
+      margin-top: 90px;
     }
-
-    &__bg-desctop-img{
-
-        width: 100%;
-
+  }
+  &__bg-mobile {
+    position: absolute;
+    top: 22%;
+    left: 0;
+    right: 0;
+  }
+  &__bg-mob {
+    width: 100%;
+    @media (min-width: 768px) {
+      display: none;
     }
-    &__main{
-        @media (min-width: 768px){
-            display: flex;;
-          }
+  }
+  &__text-box {
+    width: 220px;
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+      width: 334px;
+      height: 79px;
     }
-    &__bg-image{
-      width: 100%;
+    @media (min-width: 1200px) {
+      width: 463px;
+      margin-bottom: 32px;
     }
-
-    
-    &__title-box{
-        display: grid;
-        margin-bottom: 32px;
-        @media (min-width: 768px){
-            margin-bottom: 40px;
-          }
-          @media (min-width: 1200px){
-            margin-bottom: 60px;
-          }
+  }
+  &__text {
+    font-family: $font-maim;
+    font-size: 12px;
+    line-height: 1.58;
+    font-weight: 500;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.78;
+      letter-spacing: 0.04em;
     }
-    &__label{
-        margin-bottom: 16px;
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.75;
     }
-    &__cow-box{
-        margin-bottom: 40px;
-        @media (min-width: 768px){
-            margin-bottom: 0;
-            margin-right: 32px;
-          }
-          @media (min-width: 1200px){
-            margin-right: 99px;
-          }
+  }
+  &__description-box {
+    width: 220px;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      width: 334px;
+      margin-bottom: 40px;
     }
-    &__img{
-        width: 280px;
-        @media (min-width: 768px){
-            width: 336px;
-          }
-          @media (min-width: 1200px){
-            width: 500px;
-          }
-
+    @media (min-width: 1200px) {
+      width: 463px;
     }
-    &__box{
-        position: relative;
-        @media (min-width: 1200px){
-            margin-top: 90px;
-          }
+  }
+  &__description {
+    font-family: $font-maim;
+    font-size: 12px;
+    line-height: 1.58;
+    font-weight: 500;
+    color: $txt-cl-secondary;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.78;
+      letter-spacing: 0.04em;
     }
-    &__bg-mobile{
-        position: absolute;
-        top: 22%;
-        left: 0;
-        right: 0;
-
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.75;
     }
-    &__bg-mob{
-        width: 100%;
-        @media (min-width: 768px){
-            display: none;
-          
-          }
+  }
+  &__paragraph {
+    margin-top: 10px;
+    @media (min-width: 768px) {
+      margin-top: 16px;
     }
-    &__text-box{
-        width: 220px;
-        margin-bottom: 40px;
-        @media (min-width: 768px){
-            width: 334px;
-            height: 79px;
-          }
-          @media (min-width: 1200px){
-            width: 463px;
-            margin-bottom: 32px;
-          }
+    @media (min-width: 1200px) {
+      margin-top: 20p;
     }
-    &__text{
-        font-family: $font-maim ;
-        font-size: 12px;
-        line-height: 1.58;
-        font-weight: 500;
-        @media (min-width: 768px){
-            font-size: 14px;
-            line-height: 1.78;
-            letter-spacing: 0.04em;
-          }
-          @media (min-width: 1200px){
-            font-size: 16px;
-            line-height: 1.75;
-
-        }
-          
-    }
-    &__description-box{
-        width: 220px;
-        margin-bottom: 20px;
-          @media (min-width: 768px){
-            width: 334px;
-            margin-bottom: 40px;
-          }
-          @media (min-width: 1200px){
-            width: 463px;
-          }
-    }
-    &__description{
-        font-family: $font-maim ;
-        font-size: 12px;
-        line-height: 1.58;
-        font-weight: 500;
-        color: $txt-cl-secondary;
-        @media (min-width: 768px){
-            font-size: 14px;
-            line-height: 1.78;
-            letter-spacing: 0.04em;
-          }
-          @media (min-width: 1200px){
-            font-size: 16px;
-            line-height: 1.75;
-
-          }
-    }
-    &__paragraph{
-        margin-top: 10px;
-        @media (min-width: 768px){
-            margin-top: 16px;
-          }
-          @media (min-width: 1200px){
-           margin-top: 20p;
-
-          }
-        
-
-    }
-    &__button{
-        padding:  10px 37px;
-
-    }
-    &__icon{
-        width: 8px;
-        height: 10px;
-        margin-left: 14px;
-        fill: $btn-cl-accent;
-    }
+  }
+  &__button {
+    padding: 10px 37px;
+  }
+  &__icon {
+    width: 8px;
+    height: 10px;
+    margin-left: 14px;
+    fill: $btn-cl-accent;
+  }
 }

@@ -1,9 +1,7 @@
-<!-- Елементи виклику -->
+<!-- Потрібно добавити в елементи виклику -->
 
-<!-- <a href="#" class="js-open-modal" data-modal="1">Відкрити вікно 1</a> -->
-<!-- <button type="button" class="js-open-modal" data-modal="2">
-  Відкрити вікно 2
-</button> -->
+<!-- class="js-open-modal" data-modal="1" -->
+<!-- class="js-open-modal" data-modal="2" -->
 
 <!-- Декілька модільних вікон-->
 
@@ -12,7 +10,39 @@
   <svg class="modal__cross js-modal-close">
     <use href="./images/sprite.svg#icon-cross"></use>
   </svg>
-  <p class="modal__title">Заголовок вікна 1</p>
+  <p class="modal__title title">Buy now</p>
+  <form class="modal__form form">
+    <label class="form__fild">
+      <span class="form__text">Name</span>
+      <input type="text" name="name" class="form__input" />
+    </label>
+
+    <label class="form__fild">
+      <span class="form__text">Number</span>
+      <input type="tel" name="tel" class="form__input" />
+    </label>
+
+    <label class="form__fild form__fild--last">
+      <span class="form__text">Comment</span>
+      <textarea
+        name="comment"
+        placeholder="Enter text"
+        class="form__input form__input--comment"
+      ></textarea>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" class="checkbox__input" checked />
+      <span class="checkbox__new-box"></span>
+
+      <span class="form__text">
+        I agree with the mailing and accept it <br />
+        <a href="" class="checkbox__link">Terms of the contract</a>
+      </span>
+    </label>
+
+    <button type="submit" class="button modal__btn">Send</button>
+  </form>
 </div>
 
 <div class="modal" data-modal="2">
