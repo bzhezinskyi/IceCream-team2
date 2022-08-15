@@ -23,7 +23,7 @@
   visibility: hidden;
 
   /*  Встановлюємо ширину вікна  */
-  width: 100%;
+  width: calc(100% - 10px);
   max-width: 500px;
 
   /*  Центрируємо і задаемо z-index */
