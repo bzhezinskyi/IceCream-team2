@@ -25,7 +25,7 @@
   /*  Встановлюємо ширину вікна  */
   width: calc(100% - 10px);
   max-width: 500px;
-
+  
   /*  Центрируємо і задаемо z-index */
   position: fixed;
   top: 50%;
@@ -37,8 +37,10 @@
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 30px;
-  border-radius: 3px;
-  background-color: #fff;
+  // !!! змінив бордер
+  border-radius:30px;
+  // колір фону
+  background-color: $bg-cl-hero-ellipse;
   transition: $animations;
 }
 
@@ -97,7 +99,17 @@
   &__input {
     width: 100%;
     font: inherit;
-    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+      
+    color: $txt-cl-title;
+    border: none;
+    border-radius: 20px;
+    // додав падінг
+    padding: 3px 16px;
+    &:hover, &:focus, &:active, &:focus-visible {
+      border: 2px solid $txt-cl-title;
+    }
   }
   &__input--comment {
     padding: 12px 16px;
@@ -111,9 +123,52 @@
 }
 
 .checkbox {
+  display: flex;
   margin-bottom: 20px;
+  
+  align-items: center;
+  &__input {
+
+    // ховаємо станартний чекбокс
+    position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      // кастомний чек-бокс в стутусі чекд
+    &:checked+.checkbox__new-box
+    {
+      background-origin: border-box;
+        background-image: url(../images/icon-check.svg) ;
+        background-position: center;
+        background-size: cover;
+        border: none;
+    }
+  }
+
   &__link {
     color: inherit;
+    font-style: italic;
+  }
+  // секція для кастомного чекбоксу
+  &__new-box {
+    display: flex;
+    margin-left: 16px;
+    margin-right: 20px;
+    background-color: $bg-cl-modal-input;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    
+    
+      &:hover {
+        cursor: pointer;
+      }
   }
 }
 
@@ -128,5 +183,6 @@
   &:hover,
   &:focus {
     background-color: $btn-cl-accent;
+    
   }
 }
