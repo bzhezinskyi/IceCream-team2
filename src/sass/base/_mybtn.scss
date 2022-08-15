@@ -1,19 +1,64 @@
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+#button {
+  display: inline-block;
+  background-color: $bg-cl-hero-ellipse;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: $animations;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: 'Up';
+  font-family: $font-title;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: $txt-cl-white;
+}
+#button:hover,
+#button:focus {
+  cursor: pointer;
+  background-color: $bg-cl-mobile-menu;
+}
+#button:active {
+  background-color: $bg-cl-dots-active;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
 }
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+// .content h1 {
+//   margin-bottom: -10px;
+//   color: #03a9f4;
+//   line-height: 1.5;
+// }
+// .content h3 {
+//   font-style: italic;
+//   color: #96a2a7;
+// }
