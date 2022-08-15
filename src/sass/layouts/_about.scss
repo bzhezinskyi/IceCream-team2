@@ -6,17 +6,15 @@
       left: 0;
       right: 0;
       position: absolute;
-
+      @media (max-width: 1199px){
+        display: none;
+      }
     }
 
     &__bg-desctop-img{
 
         width: 100%;
 
-
-        @media (max-width: 1199px){
-            display: none;
-          }
     }
     &__main{
         @media (min-width: 768px){
