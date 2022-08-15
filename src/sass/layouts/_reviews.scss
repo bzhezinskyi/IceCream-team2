@@ -75,7 +75,7 @@
       width: 32px;
       height: 4px;
 
-      background-image: url(../images/reviews/dots.svg);
+      background-image: url(../images/reviews/dots.png);
 
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         bottom: -4px;
@@ -116,6 +116,8 @@
   margin: 0 9px;
 }
 .slick-dots li button {
+  width: 12px;
+  height: 12px;
   background-color: $bg-cl-dots;
   padding: 0;
   border-radius: 50%;
@@ -133,12 +135,11 @@
   background-color: transparent;
   &::before {
     content: '';
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
 
-    background-image: url(../images/reviews/home.svg);
+    background-image: url(../images/reviews/home.png);
     background-repeat: no-repeat;
-    fill: $bg-cl-dots-active;
     opacity: 1;
   }
 }
