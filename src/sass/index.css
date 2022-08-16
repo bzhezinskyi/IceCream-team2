@@ -1661,6 +1661,8 @@ h1 {
   flex-wrap: wrap;
   font-family: "DM Sans", sans-serif;
   letter-spacing: 0.04em;
+}
+.location:not(:last-child) {
   margin-bottom: 32px;
 }
 .location__card {
@@ -1725,11 +1727,13 @@ h1 {
   color: #907e82;
   line-height: 1.5;
 }
+.location__contacts__link:hover, .location__contacts__link:focus {
+  color: #ffa5ba;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .location {
     flex-wrap: nowrap;
-    margin-bottom: 60px;
   }
   .location__card {
     width: calc((100% - 40px) / 3);
@@ -1762,9 +1766,6 @@ h1 {
   }
 }
 @media screen and (min-width: 1280px) {
-  .location {
-    margin-bottom: 60px;
-  }
   .location__card {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;

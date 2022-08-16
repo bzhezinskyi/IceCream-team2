@@ -23,7 +23,10 @@
   flex-wrap: wrap;
   font-family: $font-maim;
   letter-spacing: 0.04em;
-  margin-bottom: 32px;
+
+  &:not(:last-child) { 
+    margin-bottom: 32px; 
+  }
 
   &__card {
       width: 280px;
@@ -99,6 +102,11 @@
       color: $txt-cl-secondary;
       line-height: 1.5;
     }
+
+    &__contacts__link:hover,
+    &__contacts__link:focus {
+      color: $bg-cl-hero-ellipse;
+    }
   }
 
    //* for tablet *//
@@ -106,8 +114,7 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .location {
     flex-wrap: nowrap;
-    margin-bottom: 60px;
-
+  
     &__card {
       width: calc((100% - 40px) / 3);
       margin-right: 20px;
@@ -151,9 +158,6 @@
 //* for descktop *//
 
 @media screen and (min-width: 1280px) {
-  .location {
-    margin-bottom: 60px;
-  }
 
   .location__card {
     width: calc((100% - 60px) / 3);
