@@ -1,0 +1,107 @@
+
+// БЛОК АНІМАЦІЇ
+
+// анімація вискакуючої зправа дівчинки
+@keyframes girl {
+    0% {
+        transform: translateX(100%);
+        transform: rotate(10deg);
+    }
+
+    20% {
+        transform: translateX(-10%);
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: translateX(5%);
+    }
+
+    60% {
+        transform: translateX(-3%);
+    }
+
+    85% {
+        transform: translateX(1%);
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: rotate(30deg);
+    }
+
+}
+
+// поява додаткового елементу - кувшин з молоком
+
+@keyframes move-milk {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    20% {
+        transform: translateX(10%);
+    }
+
+    40% {
+        transform: translateX(-5%);
+    }
+
+    60% {
+        transform: translateX(3%);
+    }
+
+    85% {
+        transform: translateX(-1%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+// анімація появи елементів 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+// анімація фонового еліпса
+@keyframes pulsing {
+    0% {
+        transform: scale(0.2, 0.2)
+    }
+
+    15% {
+        transform: scale(0.5, 0.5);
+    }
+
+    30% {
+        transform: scale(1.0, 1.0);
+    }
+
+    50% {
+        transform: scale(0.7, 0.7);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+// анімація частини заголовку
+@keyframes title-print {
+    0% {
+        width: 0;
+    }
+}
