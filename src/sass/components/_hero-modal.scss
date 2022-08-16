@@ -24,7 +24,7 @@
   /*  Встановлюємо ширину вікна  */
   width: calc(100% - 10px);
   max-width: 500px;
-  
+
   /*  Центрируємо і задаемо z-index */
   position: fixed;
   top: 50%;
@@ -37,7 +37,7 @@
   text-align: center;
   padding: 30px;
   // !!! змінив бордер
-  border-radius:30px;
+  border-radius: 30px;
   // колір фону
   background-color: $bg-cl-hero-ellipse;
   transition: $animations;
@@ -102,11 +102,13 @@
     font-size: 16px;
     border: 2px solid transparent;
     color: $txt-cl-title;
-    border: none;
     border-radius: 20px;
     // додав падінг
     padding: 3px 16px;
-    &:hover, &:focus, &:active, &:focus-visible {
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
       border: 2px solid $txt-cl-title;
     }
   }
@@ -124,29 +126,27 @@
 .checkbox {
   display: flex;
   margin-bottom: 20px;
-  
+
   align-items: center;
   &__input {
-
     // ховаємо станартний чекбокс
     position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-      // кастомний чек-бокс в стутусі чекд
-    &:checked+.checkbox__new-box
-    {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    // кастомний чек-бокс в стутусі чекд
+    &:checked + .checkbox__new-box {
       background-origin: border-box;
-        background-image: url(../images/icon-check.svg) ;
-        background-position: center;
-        background-size: cover;
-        border: none;
+      background-image: url(../images/hero/icon-check.png);
+      background-position: center;
+      background-size: cover;
+      border: none;
     }
   }
 
@@ -163,11 +163,10 @@
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    
-    
-      &:hover {
-        cursor: pointer;
-      }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -182,6 +181,5 @@
   &:hover,
   &:focus {
     background-color: $btn-cl-accent;
-    
   }
 }
