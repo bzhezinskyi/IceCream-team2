@@ -67,7 +67,6 @@
   transition: color $animations;
   &:hover,
   &:focus {
-    
     fill: $btn-cl-accent;
   }
 }
@@ -125,7 +124,9 @@
 }
 
 .checkbox {
+  position: relative;
   display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 
   align-items: center;
@@ -155,8 +156,20 @@
     color: inherit;
     font-style: italic;
   }
+  &__text {
+    @media screen and(max-width:374px) {
+      font-size: 10px;
+    }
+    @media screen and (min-width: 375px) and(max-width:424px) {
+      font-size: 12px;
+    }
+  }
+
   // секція для кастомного чекбоксу
   &__new-box {
+    position: absolute;
+    top: 5px;
+    left: -10px;
     display: flex;
     margin-left: 16px;
     margin-right: 20px;

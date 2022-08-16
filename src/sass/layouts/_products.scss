@@ -275,23 +275,24 @@
 .dropdown-content p {
   font-family: 'DM Sans';
   font-weight: 700;
+  font-size: 14px;
   color: #ffffff;
-  padding: 12px 16px;
+  padding: 12px 14px;
   text-decoration: none;
   display: block;
   text-align: center;
 }
 
 .milkshakes {
-  background-color: #c2e297;
+  background-color: #b0da7a;
 }
 
 .coffee {
-  background-color: #f0d1a5;
+  background-color: #ecc48b;
 }
 
 .cream {
-  background-color: #ffb8ca;
+  background-color: #fc9cb4;
 }
 
 .dropdown:hover .dropdown-content {
