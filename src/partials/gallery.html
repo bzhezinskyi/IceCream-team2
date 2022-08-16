@@ -1,56 +1,609 @@
-<section class="gallery section" id="gallery">
-  <h2 class="visually-hidden">gallery</h2>
-  <div class="gallery__container">
-    <picture>
-      <source
-        srcset="
-          ./images/gallery/desktop/gallery.webp    1x,
-          ./images/gallery/desktop/gallery@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width:1200px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/desktop/gallery.png    1x,
-          ./images/gallery/desktop/gallery@2x.png 2x
-        "
-        media="(min-width:1200px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/tablets/gallery-tab.webp    1x,
-          ./images/gallery/tablets/gallery-tab@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/tablets/gallery-tab.png    1x,
-          ./images/gallery/tablets/gallery-tab@2x.png 2x
-        "
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/mobile/gallery-mob.webp    1x,
-          ./images/gallery/mobile/gallery-mob@2x.webp 2x
-        "
-        type="image/webp"
-        media="(max-width:767px)"
-      />
-      <source
-        srcset="
-          ./images/gallery/mobile/gallery-mob.png    1x,
-          ./images/gallery/mobile/gallery-mob@2x.png 2x
-        "
-        media="(max-width:767px)"
-      />
-      <img
-        src="./images/gallery/desktop/gallery.png"
-        alt="галерея картинок мороженого"
-      />
-    </picture>
+<section class="section gallery" id="gallery">
+  <div class="container gallery">
+    <h2 class="visually-hidden">gallery</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <!-- img 01   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-01-1200@1x.webp 1x,
+                ./images/gallery/gallery-01-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-01-1200@1x.jpg 1x,
+                ./images/gallery/gallery-01-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-01-768@1x.webp 1x,
+                ./images/gallery/gallery-01-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-01-768@1x.jpg 1x,
+                ./images/gallery/gallery-01-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-01-320@1x.webp 1x,
+                ./images/gallery/gallery-01-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-01-320@1x.jpg 1x,
+                ./images/gallery/gallery-01-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-01-1200@1x.jpg"
+              alt="popsicle"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <!-- img 02   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-02-1200@1x.webp 1x,
+                ./images/gallery/gallery-02-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-02-1200@1x.jpg 1x,
+                ./images/gallery/gallery-02-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-02-768@1x.webp 1x,
+                ./images/gallery/gallery-02-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-02-768@1x.jpg 1x,
+                ./images/gallery/gallery-02-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-02-320@1x.webp 1x,
+                ./images/gallery/gallery-02-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-02-320@1x.jpg 1x,
+                ./images/gallery/gallery-02-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-02-1200@1x.jpg"
+              alt="big ice-cream cone"
+            />
+          </picture>
+        </div>
+
+        <div class="gallery-grid__item">
+          <!-- img 03   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-03-1200@1x.webp 1x,
+                ./images/gallery/gallery-03-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-03-1200@1x.jpg 1x,
+                ./images/gallery/gallery-03-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-03-768@1x.webp 1x,
+                ./images/gallery/gallery-03-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-03-768@1x.jpg 1x,
+                ./images/gallery/gallery-03-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-03-320@1x.webp 1x,
+                ./images/gallery/gallery-03-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-03-320@1x.jpg 1x,
+                ./images/gallery/gallery-03-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-03-1200@1x.jpg"
+              alt="raspberry ice-cream"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item gallery-grid__item--wide">
+          <!-- img 04   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-04-1200@1x.webp 1x,
+                ./images/gallery/gallery-04-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-04-1200@1x.jpg 1x,
+                ./images/gallery/gallery-04-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-04-768@1x.webp 1x,
+                ./images/gallery/gallery-04-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-04-768@1x.jpg 1x,
+                ./images/gallery/gallery-04-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-04-320@1x.webp 1x,
+                ./images/gallery/gallery-04-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-04-320@1x.jpg 1x,
+                ./images/gallery/gallery-04-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-04-1200@1x.jpg"
+              alt="many ice-cream cones"
+            />
+          </picture>
+        </div>
+
+        <div class="gallery-grid__item">
+          <!-- img 05   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-05-1200@1x.webp 1x,
+                ./images/gallery/gallery-05-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-05-1200@1x.jpg 1x,
+                ./images/gallery/gallery-05-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-05-768@1x.webp 1x,
+                ./images/gallery/gallery-05-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-05-768@1x.jpg 1x,
+                ./images/gallery/gallery-05-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-05-320@1x.webp 1x,
+                ./images/gallery/gallery-05-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-05-320@1x.jpg 1x,
+                ./images/gallery/gallery-05-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-05-1200@1x.jpg"
+              alt="sweet girl with ice-cream"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <!-- img 06   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-06-1200@1x.webp 1x,
+                ./images/gallery/gallery-06-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-06-1200@1x.jpg 1x,
+                ./images/gallery/gallery-06-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-06-768@1x.webp 1x,
+                ./images/gallery/gallery-06-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-06-768@1x.jpg 1x,
+                ./images/gallery/gallery-06-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-06-320@1x.webp 1x,
+                ./images/gallery/gallery-06-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-06-320@1x.jpg 1x,
+                ./images/gallery/gallery-06-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-06-1200@1x.jpg"
+              alt="ice-cream decoration"
+            />
+          </picture>
+        </div>
+
+        <div class="gallery-grid__item">
+          <!-- img 07   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-07-1200@1x.webp 1x,
+                ./images/gallery/gallery-07-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-07-1200@1x.jpg 1x,
+                ./images/gallery/gallery-07-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-07-768@1x.webp 1x,
+                ./images/gallery/gallery-07-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-07-768@1x.jpg 1x,
+                ./images/gallery/gallery-07-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-07-320@1x.webp 1x,
+                ./images/gallery/gallery-07-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-07-320@1x.jpg 1x,
+                ./images/gallery/gallery-07-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-07-1200@1x.jpg"
+              alt="hand with big ice-cream cone"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <!-- img 08   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-08-1200@1x.webp 1x,
+                ./images/gallery/gallery-08-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-08-1200@1x.jpg 1x,
+                ./images/gallery/gallery-08-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-08-768@1x.webp 1x,
+                ./images/gallery/gallery-08-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-08-768@1x.jpg 1x,
+                ./images/gallery/gallery-08-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-08-320@1x.webp 1x,
+                ./images/gallery/gallery-08-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-08-320@1x.jpg 1x,
+                ./images/gallery/gallery-08-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-08-1200@1x.jpg"
+              alt="dog eating ice-cream"
+            />
+          </picture>
+        </div>
+
+        <div class="gallery-grid__item">
+          <!-- img 09   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-09-1200@1x.webp 1x,
+                ./images/gallery/gallery-09-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-09-1200@1x.jpg 1x,
+                ./images/gallery/gallery-09-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-09-768@1x.webp 1x,
+                ./images/gallery/gallery-09-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-09-768@1x.jpg 1x,
+                ./images/gallery/gallery-09-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-09-320@1x.webp 1x,
+                ./images/gallery/gallery-09-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-09-320@1x.jpg 1x,
+                ./images/gallery/gallery-09-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-09-1200@1x.jpg"
+              alt="milk shake"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="gallery-grid__column">
+        <div class="gallery-grid__item">
+          <!-- img 10   -->
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-10-1200@1x.webp 1x,
+                ./images/gallery/gallery-10-1200@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-10-1200@1x.jpg 1x,
+                ./images/gallery/gallery-10-1200@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-10-768@1x.webp 1x,
+                ./images/gallery/gallery-10-768@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-10-768@1x.jpg 1x,
+                ./images/gallery/gallery-10-768@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-10-320@1x.webp 1x,
+                ./images/gallery/gallery-10-320@2x.webp 2x
+              "
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/gallery/gallery-10-320@1x.jpg 1x,
+                ./images/gallery/gallery-10-320@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+              type="image/jpeg"
+            />
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery-10-1200@1x.jpg"
+              alt="ice-cream cake and milk jug"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
