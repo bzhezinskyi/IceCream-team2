@@ -28,6 +28,7 @@
          padding: 0;
          color: $txt-cl-white;
          background-color: inherit;
+         
 
          &:hover,
          &:focus {
@@ -52,6 +53,7 @@
          display: block;
          padding: 11px 20px;
          border: 1px solid $bg-cl-menu-border;
+        transition: color $animations, box-shadow $animations;
 
          &:hover {
              color: $txt-cl-title;

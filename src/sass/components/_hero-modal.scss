@@ -63,10 +63,11 @@
   top: 10px;
   right: 10px;
   fill: $bg-cl-mobile-menu;
-
   background-color: inherit;
+  transition: color $animations;
   &:hover,
   &:focus {
+    
     fill: $btn-cl-accent;
   }
 }
@@ -103,7 +104,7 @@
     border: 2px solid transparent;
     color: $txt-cl-title;
     border-radius: 20px;
-    // додав падінг
+    transition: border-color $animations;
     padding: 3px 16px;
     &:hover,
     &:focus,

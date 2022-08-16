@@ -84,6 +84,7 @@
 
     &__link {
         color: $txt-cl-white;
+        transition: color $animations;
 
         &:hover {
             color: $txt-cl-title;
