@@ -402,7 +402,7 @@ h1 {
     &__pic {
             position: absolute;
             // milk appear animation
-            transform: translateX(-200%);
+            transform: translateX(-250%);
             animation: move-milk 1s forwards 2s;
     }
     &__text {
@@ -510,7 +510,8 @@ h1 {
         width: 190px;
         height: 150px;
         // анімація появи дівчинки
-        transform: translateX(100%);
+        transform: translateX(150%);
+        
         animation: girl 1s forwards 1000ms;
         @media screen and (max-width:767px) {
             display: none;}

@@ -5,10 +5,12 @@
 @keyframes girl {
     0% {
         transform: translateX(100%);
+        transform: rotate(10deg);
     }
 
     20% {
         transform: translateX(-10%);
+        transform: rotate(20deg);
     }
 
     40% {
@@ -21,10 +23,12 @@
 
     85% {
         transform: translateX(1%);
+        transform: rotate(-10deg);
     }
 
     100% {
         transform: translateX(0);
+        transform: rotate(30deg);
     }
 
 }
