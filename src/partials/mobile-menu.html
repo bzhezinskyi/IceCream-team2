@@ -1,37 +1,37 @@
-<div class="mobile-menu is-hidden" data-modal>
-  <button class="mobile-menu__close button" type="button" data-modal-close>
-    <svg class="mobile-menu__close-logo">
-      <use href="./images/sprite.svg#icon-cross"></use>
-    </svg>
-  </button>
-
-  <button
-    class="header-btn__buy mobile button js-open-modal"
-    data-modal="1"
-    type="button"
-    data-modal-close
-  >
-    Buy now
-    <svg class="buy__logo mobile">
-      <use href="./images/sprite.svg#icon-arrow-short"></use>
-    </svg>
-  </button>
-
-  <ul class="mobile-menu__list list">
-    <li class="mobile-menu__item">
-      <a href="#hero" class="mobile-menu__link link">Home</a>
-    </li>
-    <li class="mobile-menu__item">
-      <a href="#about" class="mobile-menu__link link">About us</a>
-    </li>
-    <li class="mobile-menu__item">
-      <a href="#how-made" class="mobile-menu__link link">How it’s made?</a>
-    </li>
-    <li class="mobile-menu__item">
-      <a href="#products" class="mobile-menu__link link">Our products</a>
-    </li>
-    <li class="mobile-menu__item">
-      <a href="#contacts" class="mobile-menu__link link">Contact</a>
-    </li>
-  </ul>
-</div>
+<ul class="mobile-menu__list list menu">
+  <li>
+    <button
+      class="header-btn__buy mobile button js-open-modal"
+      data-modal="1"
+      type="button"
+      data-modal-close
+    >
+      Buy now
+      <svg class="buy__logo mobile">
+        <use href="./images/sprite.svg#icon-arrow-short"></use>
+      </svg>
+    </button>
+  </li>
+  <li class="mobile-menu__item">
+    <a href="#hero" class="mobile-menu__link link menuItem">Home</a>
+  </li>
+  <li class="mobile-menu__item">
+    <a href="#about" class="mobile-menu__link link menuItem">About us</a>
+  </li>
+  <li class="mobile-menu__item">
+    <a href="#how-made" class="mobile-menu__link link menuItem"
+      >How it’s made?</a
+    >
+  </li>
+  <li class="mobile-menu__item">
+    <a href="#products" class="mobile-menu__link link menuItem">Our products</a>
+  </li>
+  <li class="mobile-menu__item">
+    <a href="#contacts" class="mobile-menu__link link menuItem">Contact</a>
+  </li>
+</ul>
+<button class="hamburger">
+  <!-- material icons https://material.io/resources/icons/ -->
+  <i class="menuIcon material-icons">menu</i>
+  <i class="closeIcon material-icons">close</i>
+</button>
