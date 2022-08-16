@@ -372,8 +372,8 @@ h1 {
   }
   &__btn {
     margin-top: 20px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     padding: 0;
     border-radius: 50%;
     display: flex;
@@ -387,11 +387,17 @@ h1 {
     }
     @media screen and (min-width: 1200px) {
       margin-top: 20px;
+      width: 26px;
+      height: 26px;
     }
     & > svg {
       width: 6px;
       height: 6px;
       fill: currentColor;
+      @media screen and (min-width: 1200px) {
+        width: 8px;
+          height: 8px;
+      }
     }
   }
 }
