@@ -1,8 +1,8 @@
 .section.gallery {
-  background-image: linear-gradient(#fff5f6 20%, #fff 20%);
+  background-image: linear-gradient(#fff5f6 20%, #fff);
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    background-image: linear-gradient(#fff5f6 55%, #fff 55%);
+    background-image: linear-gradient(#fff5f6 55%, #fff);
   }
 }
 
