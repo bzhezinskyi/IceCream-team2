@@ -1,0 +1,101 @@
+.about-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  width: calc(100% - 10px);
+  max-width: 450px;
+  background-color: $bg-cl-about;
+  background-image: url(/src/images/about/about-milk-bg-1200@1x.png);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  transition: 0.3s all;
+  padding: 30px;
+  transition: $animations;
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__read {
+    font-size: 500;
+  }
+  &__descr {
+    font-size: 13px;
+    line-height: 2;
+  }
+  &__cross {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: $bg-cl-point;
+    border-radius: 50%;
+
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: $bg-cl-mobile-menu;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__label {
+    font-family: $font-maim;
+    font-size: 12px;
+    line-height: 1.58;
+    font-weight: 500;
+    color: $bg-cl-point;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.78;
+      letter-spacing: 0.04em;
+    }
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+  &__input {
+    width: 100%;
+    font: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    border: 2px solid transparent;
+    color: $txt-cl-title;
+    border-radius: 30px;
+    transition: border-color $animations;
+    padding: 3px 16px;
+    margin-bottom: 20px;
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
+      border: 2px solid $txt-cl-title;
+    }
+    &::placeholder {
+      font-family: $font-maim;
+      font-size: 12px;
+      line-height: 1.58;
+      font-weight: 500;
+      color: $bg-cl-point;
+    }
+  }
+  &__share {
+    padding: 10px 40px;
+  }
+  &__icon {
+    width: 10px;
+    height: 10px;
+  }
+}
