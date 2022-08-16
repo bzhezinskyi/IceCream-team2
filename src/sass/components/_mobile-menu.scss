@@ -40,6 +40,9 @@
 }
 .menuIcon {
   color: $btn-cl-accent;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }
 .closeIcon {
   position: fixed;
