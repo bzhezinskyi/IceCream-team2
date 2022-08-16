@@ -1,99 +1,120 @@
 .ice-locations {
-  background: linear-gradient($txt-cl-white, $bg-cl-about);
-}
+  background: linear-gradient($txt-cl-white 90px, $bg-cl-about 0 100%);
 
-//* for mobile *//
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background: linear-gradient(
+      $txt-cl-white 115px,
+      $bg-cl-about 0 100%
+    );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background: linear-gradient(
+      $txt-cl-white 139px,
+      $bg-cl-about 0 100%
+    );
+  }
+  }
+
+  //* for mobile *//
 
 .location {
   display: flex;
   flex-wrap: wrap;
   font-family: $font-maim;
   letter-spacing: 0.04em;
-  margin-bottom: 54px;
+
+  &:not(:last-child) { 
+    margin-bottom: 32px; 
+  }
 
   &__card {
-    width: 280px;
-    margin-bottom: 20px;
-    padding: 43px 20px;
-    font-size: 12px;
-    background: $txt-cl-white;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    transition: $animations;
+      width: 280px;
+      margin-bottom: 20px;
+      padding: 43px 20px;
+      font-size: 12px;
+      background: $txt-cl-white;
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+      border-radius: 24px;
+      transition: $animations;
   }
 
   &__card:hover {
-    transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  
+    &__card:last-child {
+      margin-bottom: 0;
+    }
+  
+    &__card__title--cafe,
+    &__card__title--foodtrack {
+      display: inline-block;
+      padding: 0 25px;
+      margin-bottom: 25px;
+      color: $txt-cl-white;
+      background-color: $bg-cl-coffee;
+      border-radius: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 1.8;
+    }
+  
+    &__card__title--foodtrack {
+      background-color: $bg-cl-milkshakes;
+    }
+  
+    &__card__subtitle {
+      color: $txt-cl-main;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  
+    &__card__text {
+      color: $txt-cl-secondary;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $bg-cl-footer-border;
+    }
+  
+    &__card__time__item__days {
+      color: $txt-cl-main;
+      line-height: 1.8;
+    }
+  
+    &__card__time__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  
+    &__card__time__item__hours {
+      color: $txt-cl-subtitle;
+      line-height: 1.8;
+    }
+  
+    &__card__time {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid $bg-cl-footer-border;
+    }
+  
+    &__contacts__link {
+      color: $txt-cl-secondary;
+      line-height: 1.5;
+    }
+
+    &__contacts__link:hover,
+    &__contacts__link:focus {
+      color: $bg-cl-hero-ellipse;
+    }
   }
 
-  &__card:last-child {
-    margin-bottom: 0;
-  }
-
-  &__card__title--cafe,
-  &__card__title--foodtrack {
-    display: inline-block;
-    padding: 0 25px;
-    margin-bottom: 25px;
-    color: $txt-cl-white;
-    background-color: $bg-cl-coffee;
-    border-radius: 4px;
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 1.8;
-  }
-
-  &__card__title--foodtrack {
-    background-color: $bg-cl-milkshakes;
-  }
-
-  &__card__subtitle {
-    color: $txt-cl-main;
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-
-  &__card__text {
-    color: $txt-cl-secondary;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid $bg-cl-footer-border;
-  }
-
-  &__card__time__item__days {
-    color: $txt-cl-main;
-    line-height: 1.8;
-  }
-
-  &__card__time__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-
-  &__card__time__item__hours {
-    color: $txt-cl-subtitle;
-    line-height: 1.8;
-  }
-
-  &__card__time {
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid $bg-cl-footer-border;
-  }
-
-  &__contacts__link {
-    color: $txt-cl-secondary;
-    line-height: 1.5;
-  }
-}
-
-//* for tablet *//
+   //* for tablet *//
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .location {
     flex-wrap: nowrap;
-    margin-bottom: 81px;
-
+  
     &__card {
       width: calc((100% - 40px) / 3);
       margin-right: 20px;
@@ -137,9 +158,6 @@
 //* for descktop *//
 
 @media screen and (min-width: 1280px) {
-  .location {
-    margin-bottom: 86px;
-  }
 
   .location__card {
     width: calc((100% - 60px) / 3);
@@ -235,46 +253,39 @@
 
   &__link {
     display: inline-block;
-    padding: 12px 16px;
+    padding: 12px 8px;
 
     font-weight: bold;
     font-size: 16px;
     line-height: 1.31;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      padding: 12px 30px;
+      padding: 12px 13px;
     }
 
     @media screen and (min-width: 1280px) {
-      padding: 12px 34px;
+      padding: 12px 14px;
     }
   }
 
   &__link--white {
-    color: $txt-cl-white;
-  }
-
-  &__link--white::after {
-    display: inline-block;
-    content: '';
-    width: 7px;
-    height: 10px;
-    //   background-image: url(../images/icons/vector-white.png);
-    background-repeat: no-repeat;
-    margin-left: 13px;
-  }
-
-  &__link--red {
     color: $bg-cl-dots-active;
   }
 
-  &__link--red::after {
-    display: inline-block;
-    content: '';
-    width: 7px;
-    height: 10px;
-    //   background-image: url(../images/icons/Vector-pink.png);
-    background-repeat: no-repeat;
-    margin-left: 13px;
+  &__link--red {
+    color: $txt-cl-white;
   }
 }
+
+.arrow_icon-red {
+  width: 8px;
+  height: 10px;
+  fill: #d41443;
+}
+
+.arrow_icon-white {
+  width: 8px;
+  height: 10px;
+  fill: $txt-cl-white;
+}
+
