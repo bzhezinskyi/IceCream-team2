@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".menu"),n=document.querySelectorAll(".menuItem"),c=document.querySelector(".hamburger"),o=document.querySelector(".closeIcon"),t=document.querySelector(".menuIcon");function s(){e.classList.contains("showMenu")?(e.classList.remove("showMenu"),o.style.display="none",t.style.display="block"):(e.classList.add("showMenu"),o.style.display="block",t.style.display="none")}c.addEventListener("click",s),n.forEach((function(e){e.addEventListener("click",s)}))}();
+//# sourceMappingURL=index.e2730203.js.map
