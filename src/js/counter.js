@@ -6,20 +6,20 @@ const time3 = 50000; // ms advantages -milk
 const step3 = 1; 
 
 function outNum(num, elem) {
-	let l = document.querySelector('#' + elem);
-	n = 0;
-	let t = Math.round(time/(num/step));
+	let k = document.querySelector('#' + elem);
+	z = 0;
+	let r = Math.round(time/(num/step));
 	let interval = setInterval(() => {
-		n = n + step;
-		if (n == num) {
+		z = z + step;
+		if (z == num) {
 			clearInterval(interval);
 		}
-		l.innerHTML = n;
+		k.innerHTML = z;
 	},
-		t);
+		r);
 }
 function outNum2(num2, elem2) {
-	let l = document.querySelector('#' + elem2);
+	let j = document.querySelector('#' + elem2);
 	a = 0;
 	let s = Math.round(time2/(num2/step2));
 	let interval = setInterval(() => {
@@ -27,7 +27,7 @@ function outNum2(num2, elem2) {
 		if (a == num2) {
 			clearInterval(interval);
 		}
-		l.innerHTML = a;
+		j.innerHTML = a;
 	},
 		s);
 }
