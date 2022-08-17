@@ -1,2 +1,0 @@
-!function(e,t){let r=document.querySelector("#"+t);n=0;let l=Math.round(1e4/(e/1)),a=setInterval((()=>{n+=1,n==e&&clearInterval(a),r.innerHTML=n}),l)}(16,"cafe-count"),function(e,n){let t=document.querySelector("#"+n);a=0;let r=Math.round(2e4/(e/1)),l=setInterval((()=>{a+=1,a==e&&clearInterval(l),t.innerHTML=a}),r)}(50,"track-count"),function(e,n){let t=document.querySelector("#"+n);b=0;let r=Math.round(5e4/(e/1)),l=setInterval((()=>{b+=1,b==e&&clearInterval(l),t.innerHTML=b}),r)}(726,"milk-count");
-//# sourceMappingURL=index.7ac3146c.js.map
